@@ -1,3 +1,21 @@
 body {
     text-align: center;
 }
+
+#textarea {
+    resize: none;
+    width: 75%;
+    height: 200px;
+    resize: none;
+    font-family: 'superhelio _regular', sans-serif;
+}
+
+#mbutton {
+    color: red;
+    resize: none;
+    width: 60px;
+    height: 40px;
+    resize: none;
+    font-family: 'superhelio _regular', sans-serif;
+    font-size: 15px;
+}

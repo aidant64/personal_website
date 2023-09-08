@@ -74,7 +74,6 @@ function aboutMenuPress() {
         .then(data => {
             // Insert the loaded HTML content into the externalContent div
             contentDiv.innerHTML = data;
-            contentDiv.
         })
         .catch(error => {
             console.error('Error loading external HTML:', error);
@@ -90,6 +89,3 @@ function deselectAll() {
     researchMenu.classList.remove('selected');
     aboutMenu.classList.remove('selected');
 }
-
-console.log("This is a message that will be printed to the console.");
-alert("Hello, World!");
