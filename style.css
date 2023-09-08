@@ -1,0 +1,65 @@
+body {
+  float: center;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  /*background-color: rgb(20, 19, 19);*/
+  background-color: #190126;
+  color: white;
+  font-family: 'superhelio _regular', sans-serif;
+  text-align: center;
+}
+
+img {
+  font-size: 0;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  display: inline-block;
+}
+
+div {
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+}
+
+.images {
+  font-size: 0;
+}
+
+a {
+  color: orange;
+}
+
+a:active {
+  color: red;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+  padding: 10px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav p {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: inline-block;
+}
+
+/* Change the color of links on hover */
+.topnav p:hover {
+  background-color: #ddd !important;
+  color: black !important;
+  cursor: pointer;
+}
+
+.selected {
+  color: black !important;
+  background-color: white !important;
+}
