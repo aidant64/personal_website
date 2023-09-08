@@ -67,6 +67,17 @@ function researchMenuPress() {
 function aboutMenuPress() {
     deselectAll();
     aboutMenu.classList.add('selected');
+
+    // Use the fetch() function to retrieve the external HTML file
+    fetch('/about/about.html')
+        .then(response => response.text())
+        .then(data => {
+            // Insert the loaded HTML content into the externalContent div
+            contentDiv.innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading external HTML:', error);
+        });
 }
 
 
