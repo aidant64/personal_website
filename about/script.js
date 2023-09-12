@@ -5,21 +5,32 @@ mButton.addEventListener("click", mButtonClicked);
 
 
 function mButtonClicked() {
-var my_url = 'http://localhost/s.py?a=' + mTextField.value;
-fetch(my_url)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.text(); // Parse the response body as JSON
-  })
-  .then(data => {
-    // Use the data received from the API
-    alert(data);
-    console.log(data);
-  })
-  .catch(error => {
-    // Handle errors here
-    console.error('Fetch error:', error);
-  });
+
+  mStatus.textContent = "...sending..."
+
+  const message = mTextField.value;
+  const MAX_LENGTH = 4;
+  if(message.length > MAX_LENGTH){
+    mStatus.textContent = "Message can only be " + structuredClone(MAX_LENGTH) + " characters";
+    return null;
+  }
+
+
+  const my_url = 'http://localhost/s.py?a=' + message;
+  fetch(my_url)
+    .then(response => {
+      if (!response.ok) {
+        mStatus.textContent = "Unknown network error";
+        throw new Error('Network response was not ok');
+      }
+      return response.text(); 
+    })
+    .then(data => {
+      mStatus.textContent = "Message delivered!";
+      alert(data);
+      console.log(data);
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+    });
 }
