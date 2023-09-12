@@ -2,7 +2,7 @@ body {
     text-align: center;
 }
 
-#textarea {
+#mtext {
     resize: none;
     width: 75%;
     height: 200px;
