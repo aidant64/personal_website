@@ -11,11 +11,15 @@ body {
 }
 
 #mbutton {
-    color: red;
     resize: none;
     width: 60px;
     height: 40px;
     resize: none;
     font-family: 'superhelio _regular', sans-serif;
     font-size: 15px;
+    cursor: pointer;
+}
+
+button :hover {
+    background-color: antiquewhite;
 }
