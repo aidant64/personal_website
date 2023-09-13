@@ -10,6 +10,10 @@ body {
   text-align: center;
 }
 
+#messageHtml {
+  display: none;
+}
+
 img {
   font-size: 0;
   padding: 0px;

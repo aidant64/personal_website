@@ -1,7 +1,7 @@
 #! /usr/bin/python3
 
 import cgi
-import cgitb; cgitb.enable() # Optional; for debugging only
+import cgitb; cgitb.enable() 
 
 incrementer = 0;
 with open('./responses/incrementer', 'r') as file:
@@ -24,4 +24,3 @@ with open(filename, 'w') as file:
 print("Content-Type: text/html")
 print("")
 print("recieved")
-print("r")
