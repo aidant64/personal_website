@@ -1,6 +1,6 @@
 # Personal Website
 
-## Hosted with AWS
+Hosted with an AWS Ubuntu Server instance. 
 
 ## Configuration
 Used Apache Web Server with mod_cgi to enable server side scripting
