@@ -9,7 +9,7 @@ function mButtonClicked() {
   mStatus.textContent = "...sending..."
 
   const message = mTextField.value;
-  const MAX_LENGTH = 4;
+  const MAX_LENGTH = 1000;
   if(message.length > MAX_LENGTH){
     mStatus.textContent = "Message can only be " + structuredClone(MAX_LENGTH) + " characters";
     return null;

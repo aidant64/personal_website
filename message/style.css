@@ -2,24 +2,35 @@ body {
     text-align: center;
 }
 
+
 #mtext {
     resize: none;
-    width: 75%;
+    width: 60%;
     height: 200px;
     resize: none;
+    margin: 10px;
     font-family: 'superhelio _regular', sans-serif;
+    background-color: bisque;
+    border-color: black;
+    padding: 5px;
 }
 
-#mbutton {
+#mtext :active{
+    color: red;
+}
+
+button {
     resize: none;
-    width: 60px;
+    width: 90px;
     height: 40px;
     resize: none;
     font-family: 'superhelio _regular', sans-serif;
     font-size: 15px;
     cursor: pointer;
+    margin: 10px;
+    background-color: orange;
 }
 
-button :hover {
-    background-color: antiquewhite;
+button :active {
+    background-color: red;
 }
