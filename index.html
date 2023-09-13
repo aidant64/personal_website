@@ -9,7 +9,7 @@
   <link href="https://fonts.cdnfonts.com/css/superhelio" rel="stylesheet" />
 </head>
 
-<body onload="onload()">
+<body>
   <header>
     <h1>Aidan Thomas</h1>
     <h4> aidanthomas128@gmail.com - (805)-705-2569 - San Diego, CA</h4>
@@ -19,10 +19,23 @@
     <p id="Education" class="selected">Education</p>
     <p id="Projects">Projects</p>
     <p id="Research">Research</p>
-    <a id="About" href="/about/about.html">About</a>
+    <p id="About">About</p>
   </div>
 
   <div id="content"></div>
+
+  <div id="messageHtml">
+    <link rel="stylesheet" type="text/css" href="/about/style.css" />
+
+    <h4>Send me a message through this website's server:</h4>
+    <textarea id="mtext" placeholder="Here you send me a message..."></textarea>
+    <div>
+        <button id="mbutton">Send</button>
+    </div>
+    <p id="mstatus"></p>
+
+    <script src="/about/script.js"></script>
+  </div>
 
   <script src="/script.js"></script>
 

@@ -6,18 +6,20 @@ const projectMenu = document.getElementById("Projects");
 const researchMenu = document.getElementById("Research");
 const aboutMenu = document.getElementById("About");
 
+const messageDiv = document.getElementById("messageHtml");
+
 educationMenu.addEventListener("click", educationMenuPress);
 projectMenu.addEventListener("click", projectMenuPress);
 researchMenu.addEventListener("click", researchMenuPress);
 aboutMenu.addEventListener("click", aboutMenuPress);
 
-function onload() {
-    educationMenuPress();
-}
+messageDiv.style.display = "none";
+educationMenuPress();
 
 function educationMenuPress() {
     deselectAll();
     educationMenu.classList.add('selected');
+    messageDiv.style.display = "none";
 
     // Use the fetch() function to retrieve the external HTML file
     fetch('/education/education.html')
@@ -35,6 +37,7 @@ function educationMenuPress() {
 function projectMenuPress() {
     deselectAll();
     projectMenu.classList.add('selected');
+    messageDiv.style.display = "none";
 
     // Use the fetch() function to retrieve the external HTML file
     fetch('/projects/projects.html')
@@ -51,6 +54,7 @@ function projectMenuPress() {
 function researchMenuPress() {
     deselectAll();
     researchMenu.classList.add('selected');
+    messageDiv.style.display = "none";
 
     // Use the fetch() function to retrieve the external HTML file
     fetch('/research/research.html')
@@ -67,18 +71,9 @@ function researchMenuPress() {
 function aboutMenuPress() {
     deselectAll();
     aboutMenu.classList.add('selected');
+    messageDiv.style.display = "block";
 
-    // Use the fetch() function to retrieve the external HTML file
-    fetch('/about/about.html')
-        .then(response => response.text())
-        .then(data => {
-            // Insert the loaded HTML content into the externalContent div
-            contentDiv.innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error loading external HTML:', error);
-        });
-
+    contentDiv.innerHTML = "";
 
 }
 
