@@ -11,10 +11,9 @@ function mButtonClicked() {
   const message = mTextField.value;
   const MAX_LENGTH = 4;
   if(message.length > MAX_LENGTH){
-    mStatus.textContent = "Message can only be " + structuredClone(MAX_LENGTH) + " characters";
+    mStatus.textContent = "Message can only be " + MAX_LENGTH + " characters";
     return null;
   }
-
 
   const my_url = 'http://localhost/s.py?a=' + message;
   fetch(my_url)

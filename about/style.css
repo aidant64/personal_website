@@ -7,7 +7,6 @@ body {
     width: 75%;
     height: 200px;
     resize: none;
-    font-family: 'superhelio _regular', sans-serif;
 }
 
 #mbutton {
@@ -15,7 +14,6 @@ body {
     width: 60px;
     height: 40px;
     resize: none;
-    font-family: 'superhelio _regular', sans-serif;
     font-size: 15px;
     cursor: pointer;
 }
