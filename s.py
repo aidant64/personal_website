@@ -14,7 +14,7 @@ with open('./responses/incrementer', 'w') as file:
 
 filename = "./responses/" + str(incrementer) + ".txt";
 with open(filename, 'w') as file:
-    file.write("date:")
+    file.write("message:   ")
 
     arguments = cgi.FieldStorage()
     for i in arguments.keys():
