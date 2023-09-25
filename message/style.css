@@ -5,14 +5,15 @@ body {
 
 #mtext {
     resize: none;
-    width: 60%;
-    height: 200px;
+    width: 90px;
+    height: 40px;
     resize: none;
-    margin: 10px;
-    background-color: bisque;
-    border-color: black;
-    padding: 5px;
     font-family: 'superhelio _regular', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 10px;
+    background-color: orange;
+
 }
 
 #mtext :active {
