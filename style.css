@@ -3,12 +3,12 @@ body {
   padding: 0px;
   border: 0px;
   margin: 0px;
+  /*background-color: rgb(20, 19, 19);*/
   background-color: #190126;
   color: white;
-  text-align: center;
   font-family: 'superhelio _regular', sans-serif;
+  text-align: center;
 }
-
 
 #messageHtml {
   display: none;
@@ -39,7 +39,6 @@ a {
 a:active {
   color: red;
 }
-
 
 /* Add a black background color to the top navigation */
 .topnav {

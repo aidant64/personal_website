@@ -1,22 +1,22 @@
 body {
     text-align: center;
-    font-family: 'superhelio _regular', sans-serif;
 }
+
 
 #mtext {
     resize: none;
-    width: 90px;
-    height: 40px;
+    width: 60%;
+    height: 200px;
     resize: none;
-    font-family: 'superhelio _regular', sans-serif;
-    font-size: 15px;
-    cursor: pointer;
     margin: 10px;
-    background-color: orange;
-
+    font-family: 'superhelio _regular', sans-serif;
+    background-color: bisque;
+    border-color: black;
+    padding: 5px;
+    cursor: text;
 }
 
-#mtext :active {
+#mtext :active{
     color: red;
 }
 
@@ -25,11 +25,11 @@ button {
     width: 90px;
     height: 40px;
     resize: none;
+    font-family: 'superhelio _regular', sans-serif;
     font-size: 15px;
     cursor: pointer;
     margin: 10px;
     background-color: orange;
-    font-family: 'superhelio _regular', sans-serif;
 }
 
 button :active {
