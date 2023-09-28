@@ -17,65 +17,65 @@ messageDiv.style.display = "none";
 educationMenuPress();
 
 function educationMenuPress() {
-    deselectAll();
-    educationMenu.classList.add('selected');
-    messageDiv.style.display = "none";
+  deselectAll();
+  educationMenu.classList.add('selected');
+  messageDiv.style.display = "none";
 
-    fetch('/education/education.html')
-        .then(response => response.text())
-        .then(data => {
-            contentDiv.innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error loading external HTML:', error);
-        });
+  fetch('/education/education.html')
+    .then(response => response.text())
+    .then(data => {
+      contentDiv.innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading external HTML:', error);
+    });
 }
 
 
 function projectMenuPress() {
-    deselectAll();
-    projectMenu.classList.add('selected');
-    messageDiv.style.display = "none";
+  deselectAll();
+  projectMenu.classList.add('selected');
+  messageDiv.style.display = "none";
 
-    fetch('/projects/projects.html')
-        .then(response => response.text())
-        .then(data => {
-            contentDiv.innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error loading external HTML:', error);
-        });
+  fetch('/projects/projects.html')
+    .then(response => response.text())
+    .then(data => {
+      contentDiv.innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading external HTML:', error);
+    });
 }
 
 function researchMenuPress() {
-    deselectAll();
-    researchMenu.classList.add('selected');
-    messageDiv.style.display = "none";
+  deselectAll();
+  researchMenu.classList.add('selected');
+  messageDiv.style.display = "none";
 
-    fetch('/research/research.html')
-        .then(response => response.text())
-        .then(data => {
-            contentDiv.innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error loading external HTML:', error);
-        });
+  fetch('/research/research.html')
+    .then(response => response.text())
+    .then(data => {
+      contentDiv.innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading external HTML:', error);
+    });
 }
 
 function aboutMenuPress() {
-    deselectAll();
-    aboutMenu.classList.add('selected');
-    messageDiv.style.display = "block";
+  deselectAll();
+  aboutMenu.classList.add('selected');
+  messageDiv.style.display = "block";
 
-    contentDiv.innerHTML = "";
+  contentDiv.innerHTML = "";
 }
 
 
 function deselectAll() {
-    educationMenu.classList.remove('selected');
-    projectMenu.classList.remove('selected');
-    researchMenu.classList.remove('selected');
-    aboutMenu.classList.remove('selected');
+  educationMenu.classList.remove('selected');
+  projectMenu.classList.remove('selected');
+  researchMenu.classList.remove('selected');
+  aboutMenu.classList.remove('selected');
 }
 
 
@@ -92,7 +92,7 @@ function mButtonClicked() {
 
   const message = mTextField.value;
   const MAX_LENGTH = 1000;
-  if(message.length > MAX_LENGTH || message.length <= 0){
+  if (message.length > MAX_LENGTH || message.length <= 0) {
     mStatus.textContent = "Message must be 1-" + MAX_LENGTH + " characters";
     return null;
   }
@@ -100,12 +100,12 @@ function mButtonClicked() {
   clickCount = parseInt(getCookie('clickCount')) || 0;
   clickCount++;
   document.cookie = "clickCount=" + clickCount;
-  if(clickCount >= 4){
+  if (clickCount >= 4) {
     mStatus.textContent = "You can only send 3 messages.";
     return null;
   }
 
-  const my_url = '/s.py?a=' + message;
+  const my_url = '/serverSide/message.py?a=' + message;
   fetch(my_url)
     .then(response => {
       if (!response.ok) {
@@ -127,13 +127,13 @@ function getCookie(name) {
   var nameEQ = name + "=";
   var cookies = document.cookie.split(';');
   for (var i = 0; i < cookies.length; i++) {
-      var cookie = cookies[i];
-      while (cookie.charAt(0) === ' ') {
-          cookie = cookie.substring(1, cookie.length);
-      }
-      if (cookie.indexOf(nameEQ) === 0) {
-          return cookie.substring(nameEQ.length, cookie.length);
-      }
+    var cookie = cookies[i];
+    while (cookie.charAt(0) === ' ') {
+      cookie = cookie.substring(1, cookie.length);
+    }
+    if (cookie.indexOf(nameEQ) === 0) {
+      return cookie.substring(nameEQ.length, cookie.length);
+    }
   }
   return null;
 }
