@@ -28,9 +28,7 @@ div {
   margin: 0px;
 }
 
-.images {
-  font-size: 0;
-}
+
 
 a {
   color: orange;
@@ -40,7 +38,7 @@ a:active {
   color: red;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 2000px) {
 
   /* Add a black background color to the top navigation */
   .topnav {
@@ -58,6 +56,10 @@ a:active {
     display: inline-block;
   }
 
+  img {
+    font-size: 0;
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 2000px) {
@@ -76,23 +78,32 @@ a:active {
     width: 23%;
     text-decoration: none;
     font-size: 35px;
-    padding-top: 25px;
+    padding-top: 10px;
     padding-bottom: 25px;
     margin-right: -6px;
   }
 
-  #mh4{
+  #mh4 {
     display: none;
   }
 
-  h1{
-    padding-top: 6%;
+  h1 {
+    padding-top: 2%;
     padding-bottom: 3%;
     font-size: 60px;
-   }
+  }
 
-  body{
-     font-size: 30px;
+  body {
+    font-size: 30px;
+  }
+
+  .banner {
+    font-size: 17px;
+  }
+
+  img {
+    font-size: 0;
+    width: 90%;
   }
 }
 
