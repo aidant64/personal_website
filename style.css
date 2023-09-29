@@ -38,7 +38,7 @@ a:active {
   color: red;
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1000px) {
 
   /* Add a black background color to the top navigation */
   .topnav {
@@ -62,7 +62,7 @@ a:active {
   }
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 1000px) {
 
   /* Add a black background color to the top navigation */
   .topnav {
