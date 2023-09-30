@@ -1,0 +1,30 @@
+h4 {
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+#question {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+button {
+    font-family: 'superhelio _regular', sans-serif;
+    margin: 25px;
+    padding: 25px;
+    background-color: orange;
+    border: 0px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: orangered;
+}
+
+button:active {
+    background-color: red;
+}

@@ -6,15 +6,156 @@ const projectMenu = document.getElementById("Projects");
 const researchMenu = document.getElementById("Research");
 const aboutMenu = document.getElementById("About");
 
-const messageDiv = document.getElementById("messageHtml");
-
 educationMenu.addEventListener("click", educationMenuPress);
 projectMenu.addEventListener("click", projectMenuPress);
 researchMenu.addEventListener("click", researchMenuPress);
 aboutMenu.addEventListener("click", aboutMenuPress);
 
+const messageDiv = document.getElementById("poll");
+const op1 = document.getElementById("op1");
+const op2 = document.getElementById("op2");
+const op3 = document.getElementById("op3");
+const op4 = document.getElementById("op4");
+op1.addEventListener("click", function () {
+  handleButtonClick(1);
+});
+
+op2.addEventListener("click", function () {
+  handleButtonClick(2);
+});
+
+op3.addEventListener("click", function () {
+  handleButtonClick(3);
+});
+
+op4.addEventListener("click", function () {
+  handleButtonClick(4);
+});
+
+function checkAnswered() {
+  var x = getCookie("responded");
+  if (x == null) {
+    return false;
+  }
+
+  const my_url = '/poll/data'
+  fetch(my_url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text();
+    })
+    .then(data => {
+      const ndata = data.split(',').map(Number);
+
+      const viewportHeight = 500;
+      const localMax = Math.max(...ndata);
+
+      for (var i = 0; i < ndata.length; i++) {
+        var h = ndata[i] / localMax * viewportHeight;
+        if (h < 20) {
+          h = 20;
+        }
+
+        const button = document.getElementById(`op${i + 1}`);
+        button.style.height = `${h}px`;
+        button.textContent = `${button.textContent} (${ndata[i]})`;
+      }
+
+      console.log(data);
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+    });
+
+  if (x == 1) {
+    op1.style.backgroundColor = "RED";
+  } else if (x == 2) {
+    op2.style.backgroundColor = "RED";
+  } else if (x == 3) {
+    op3.style.backgroundColor = "RED";
+  } else if (x == 4) {
+    op4.style.backgroundColor = "RED";
+  }
+
+  op1.disabled = true;
+  op2.disabled = true;
+  op3.disabled = true;
+  op4.disabled = true;
+  op1.style.cursor = "default";
+  op2.style.cursor = "default";
+  op3.style.cursor = "default";
+  op4.style.cursor = "default";
+  return true;
+}
+
+function handleButtonClick(buttonId) {
+  if (checkAnswered()) {
+    return;
+  }
+
+  op1.disabled = true;
+  op2.disabled = true;
+  op3.disabled = true;
+  op4.disabled = true;
+
+  const my_url = '/poll/graph.py?a=' + buttonId;
+  fetch(my_url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text();
+    })
+    .then(data => {
+      const ndata = data.split(',').map(Number);
+
+      const viewportHeight = 500;
+      const localMax = Math.max(...ndata);
+
+      for (var i = 0; i < ndata.length; i++) {
+        var h = ndata[i] / localMax * viewportHeight;
+        if (h < 20) {
+          h = 20;
+        }
+
+        const button = document.getElementById(`op${i + 1}`);
+        button.style.height = `${h}px`;
+        button.textContent = `${button.textContent} (${ndata[i]})`;
+      }
+
+      console.log(data);
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+    });
+
+  document.cookie = "responded=" + buttonId;
+
+  if (buttonId == 1) {
+    op1.style.backgroundColor = "RED";
+  } else if (buttonId == 2) {
+    op2.style.backgroundColor = "RED";
+  } else if (buttonId == 3) {
+    op3.style.backgroundColor = "RED";
+  } else {
+    op4.style.backgroundColor = "RED";
+  }
+
+
+  op1.style.cursor = "default";
+  op2.style.cursor = "default";
+  op3.style.cursor = "default";
+  op4.style.cursor = "default";
+}
+
+
+
 messageDiv.style.display = "none";
 educationMenuPress();
+
+
 
 function educationMenuPress() {
   deselectAll();
@@ -68,6 +209,7 @@ function aboutMenuPress() {
   messageDiv.style.display = "block";
 
   contentDiv.innerHTML = "";
+  checkAnswered()
 }
 
 
@@ -78,50 +220,6 @@ function deselectAll() {
   aboutMenu.classList.remove('selected');
 }
 
-
-const mButton = document.getElementById('mbutton');
-const mStatus = document.getElementById('mstatus');
-const mTextField = document.getElementById('mtext');
-
-var clickCount = parseInt(getCookie('clickCount')) || 0;
-mButton.addEventListener("click", mButtonClicked);
-
-function mButtonClicked() {
-
-  mStatus.textContent = "...sending..."
-
-  const message = mTextField.value;
-  const MAX_LENGTH = 1000;
-  if (message.length > MAX_LENGTH || message.length <= 0) {
-    mStatus.textContent = "Message must be 1-" + MAX_LENGTH + " characters";
-    return null;
-  }
-
-  clickCount = parseInt(getCookie('clickCount')) || 0;
-  clickCount++;
-  document.cookie = "clickCount=" + clickCount;
-  if (clickCount >= 4) {
-    mStatus.textContent = "You can only send 3 messages.";
-    return null;
-  }
-
-  const my_url = '/serverSide/message.py?a=' + message;
-  fetch(my_url)
-    .then(response => {
-      if (!response.ok) {
-        mStatus.textContent = "Unknown network error";
-        throw new Error('Network response was not ok');
-      }
-      return response.text();
-    })
-    .then(data => {
-      mStatus.textContent = "Message delivered!";
-      console.log(data);
-    })
-    .catch(error => {
-      console.error('Fetch error:', error);
-    });
-}
 
 function getCookie(name) {
   var nameEQ = name + "=";
