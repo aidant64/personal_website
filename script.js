@@ -60,7 +60,15 @@ function checkAnswered() {
 
         const button = document.getElementById(`op${i + 1}`);
         button.style.height = `${h}px`;
-        button.textContent = `${button.textContent} (${ndata[i]})`;
+        if (i == 0) {
+          op1.textContent = `Mac OS (${ndata[i]})`
+        } else if (i == 1) {
+          op2.textContent = `Windows (${ndata[i]})`
+        } else if (i == 2) {
+          op3.textContent = `Unix/Linux (${ndata[i]})`
+        } else if (i == 3) {
+          op4.textContent = `Chrome OS (${ndata[i]})`
+        }
       }
 
       console.log(data);
@@ -122,7 +130,15 @@ function handleButtonClick(buttonId) {
 
         const button = document.getElementById(`op${i + 1}`);
         button.style.height = `${h}px`;
-        button.textContent = `${button.textContent} (${ndata[i]})`;
+        if (i == 0) {
+          op1.textContent = `Mac OS (${ndata[i]})`
+        } else if (i == 1) {
+          op2.textContent = `Windows (${ndata[i]})`
+        } else if (i == 2) {
+          op3.textContent = `Unix/Linux (${ndata[i]})`
+        } else if (i == 3) {
+          op4.textContent = `Chrome OS (${ndata[i]})`
+        }
       }
 
       console.log(data);
