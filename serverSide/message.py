@@ -4,15 +4,15 @@ import cgi
 import cgitb; cgitb.enable() 
 
 incrementer = 0;
-with open('./responses/incrementer', 'r') as file:
+with open('/var/www/html/responses/incrementer', 'r') as file:
     incrementer = int(file.read())
 
 incrementer = incrementer + 1
-with open('./responses/incrementer', 'w') as file:
+with open('var/www/html/responses/incrementer', 'w') as file:
     file.write(str(incrementer))
 
 
-filename = "./responses/" + str(incrementer) + ".txt";
+filename = "/home/ubuntu/r/" + str(incrementer) + ".txt";
 with open(filename, 'w') as file:
     file.write("message:   ")
 
