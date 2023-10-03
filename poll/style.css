@@ -6,8 +6,10 @@ h4 {
 #question {
     height: 500px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 50px;
 }
 
 button {
@@ -17,8 +19,9 @@ button {
     background-color: orange;
     border: 0px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
+    width: 200px;
 }
 
 button:hover {

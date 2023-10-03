@@ -47,55 +47,65 @@ function checkAnswered() {
       return response.text();
     })
     .then(data => {
-      const ndata = data.split(',').map(Number);
-
-      const viewportHeight = 500;
-      const localMax = Math.max(...ndata);
-
-      for (var i = 0; i < ndata.length; i++) {
-        var h = ndata[i] / localMax * viewportHeight;
-        if (h < 20) {
-          h = 20;
-        }
-
-        const button = document.getElementById(`op${i + 1}`);
-        button.style.height = `${h}px`;
-        if (i == 0) {
-          op1.textContent = `Mac OS (${ndata[i]})`
-        } else if (i == 1) {
-          op2.textContent = `Windows (${ndata[i]})`
-        } else if (i == 2) {
-          op3.textContent = `Unix/Linux (${ndata[i]})`
-        } else if (i == 3) {
-          op4.textContent = `Chrome OS (${ndata[i]})`
-        }
-      }
-
-      console.log(data);
+      updateGraphWidths(data);
     })
     .catch(error => {
       console.error('Fetch error:', error);
     });
 
-  if (x == 1) {
-    op1.style.backgroundColor = "RED";
-  } else if (x == 2) {
-    op2.style.backgroundColor = "RED";
-  } else if (x == 3) {
-    op3.style.backgroundColor = "RED";
-  } else if (x == 4) {
-    op4.style.backgroundColor = "RED";
-  }
+
 
   op1.disabled = true;
   op2.disabled = true;
   op3.disabled = true;
   op4.disabled = true;
+  updateGraphColors(x);
+
+  return true;
+}
+
+function updateGraphWidths(data) {
+  const ndata = data.split(',').map(Number);
+
+  const viewportHeight = document.getElementById("question").offsetWidth - 50;
+  const localMax = Math.max(...ndata);
+
+  for (var i = 0; i < ndata.length; i++) {
+    var h = ndata[i] / localMax * viewportHeight;
+    if (h < 20) {
+      h = 20;
+    }
+
+    const button = document.getElementById(`op${i + 1}`);
+    button.style.width = `${h}px`;
+    if (i == 0) {
+      op1.textContent = `Mac OS (${ndata[i]})`
+    } else if (i == 1) {
+      op2.textContent = `Windows (${ndata[i]})`
+    } else if (i == 2) {
+      op3.textContent = `Unix/Linux (${ndata[i]})`
+    } else if (i == 3) {
+      op4.textContent = `Chrome OS (${ndata[i]})`
+    }
+  }
+}
+
+function updateGraphColors(buttonID) {
   op1.style.cursor = "default";
   op2.style.cursor = "default";
   op3.style.cursor = "default";
   op4.style.cursor = "default";
-  return true;
+
+
+  if (buttonId == 1) {
+    op1.style.backgroundColor = "RED";
+  } else if (buttonId == 2) {
+    op2.style.backgroundColor = "RED";
+  } else if (buttonId == 3) {
+    op3.style.backgroundColor = "RED";
+  } else {
+    op4.style.backgroundColor = "RED";
+  }
 }
 
 function handleButtonClick(buttonId) {
@@ -117,31 +127,7 @@ function handleButtonClick(buttonId) {
       return response.text();
     })
     .then(data => {
-      const ndata = data.split(',').map(Number);
-
-      const viewportHeight = 500;
-      const localMax = Math.max(...ndata);
-
-      for (var i = 0; i < ndata.length; i++) {
-        var h = ndata[i] / localMax * viewportHeight;
-        if (h < 20) {
-          h = 20;
-        }
-
-        const button = document.getElementById(`op${i + 1}`);
-        button.style.height = `${h}px`;
-        if (i == 0) {
-          op1.textContent = `Mac OS (${ndata[i]})`
-        } else if (i == 1) {
-          op2.textContent = `Windows (${ndata[i]})`
-        } else if (i == 2) {
-          op3.textContent = `Unix/Linux (${ndata[i]})`
-        } else if (i == 3) {
-          op4.textContent = `Chrome OS (${ndata[i]})`
-        }
-      }
-
-      console.log(data);
+      updateGraphWidths(data);
     })
     .catch(error => {
       console.error('Fetch error:', error);
@@ -149,21 +135,8 @@ function handleButtonClick(buttonId) {
 
   document.cookie = "responded=" + buttonId;
 
-  if (buttonId == 1) {
-    op1.style.backgroundColor = "RED";
-  } else if (buttonId == 2) {
-    op2.style.backgroundColor = "RED";
-  } else if (buttonId == 3) {
-    op3.style.backgroundColor = "RED";
-  } else {
-    op4.style.backgroundColor = "RED";
-  }
+  updateGraphColors(buttonId);
 
-
-  op1.style.cursor = "default";
-  op2.style.cursor = "default";
-  op3.style.cursor = "default";
-  op4.style.cursor = "default";
 }
 
 
