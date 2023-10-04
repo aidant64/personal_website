@@ -22,6 +22,7 @@ button {
     font-size: 18px;
     text-align: center;
     width: 200px;
+    transition: width 0.9s ease;
 }
 
 button:not([disabled]):hover {
