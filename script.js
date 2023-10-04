@@ -141,11 +141,6 @@ function handleButtonClick(buttonId) {
 
 
 
-messageDiv.style.display = "none";
-educationMenuPress();
-
-
-
 function educationMenuPress() {
   deselectAll();
   educationMenu.classList.add('selected');
@@ -223,4 +218,18 @@ function getCookie(name) {
     }
   }
   return null;
+}
+
+
+messageDiv.style.display = "none";
+educationMenuPress();
+
+function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+if (isMobileDevice()) {
+  document.body.classList.add("mobile");
+} else {
+  document.body.classList.add("desktop");
 }
