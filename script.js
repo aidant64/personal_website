@@ -216,3 +216,7 @@ if (isMobileDevice()) {
 } else {
   document.body.classList.add("desktop");
 }
+
+
+alert("This website uses Google Analytics and cookies");
+document.body.style.display = "block";
