@@ -33,10 +33,11 @@ op4.addEventListener("click", function () {
 });
 
 function checkAnswered() {
-  var x = getCookie("responded");
+  var x = localStorage.getItem('polled');
   if (x == null) {
     return false;
   }
+  x = parseInt(x, 10);
 
   const my_url = '/poll/data'
   fetch(my_url)
@@ -52,8 +53,6 @@ function checkAnswered() {
     .catch(error => {
       console.error('Fetch error:', error);
     });
-
-
 
   op1.disabled = true;
   op2.disabled = true;
@@ -97,11 +96,11 @@ function updateGraphColors(buttonID) {
   op4.style.cursor = "default";
 
 
-  if (buttonId == 1) {
+  if (buttonID == 1) {
     op1.style.backgroundColor = "RED";
-  } else if (buttonId == 2) {
+  } else if (buttonID == 2) {
     op2.style.backgroundColor = "RED";
-  } else if (buttonId == 3) {
+  } else if (buttonID == 3) {
     op3.style.backgroundColor = "RED";
   } else {
     op4.style.backgroundColor = "RED";
@@ -133,7 +132,7 @@ function handleButtonClick(buttonId) {
       console.error('Fetch error:', error);
     });
 
-  document.cookie = "responded=" + buttonId;
+  localStorage.setItem('polled', buttonId);
 
   updateGraphColors(buttonId);
 
@@ -202,22 +201,6 @@ function deselectAll() {
   projectMenu.classList.remove('selected');
   researchMenu.classList.remove('selected');
   aboutMenu.classList.remove('selected');
-}
-
-
-function getCookie(name) {
-  var nameEQ = name + "=";
-  var cookies = document.cookie.split(';');
-  for (var i = 0; i < cookies.length; i++) {
-    var cookie = cookies[i];
-    while (cookie.charAt(0) === ' ') {
-      cookie = cookie.substring(1, cookie.length);
-    }
-    if (cookie.indexOf(nameEQ) === 0) {
-      return cookie.substring(nameEQ.length, cookie.length);
-    }
-  }
-  return null;
 }
 
 
