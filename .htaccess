@@ -1,15 +1,23 @@
-#Options FollowSymLinks
+RewriteEngine On
 
-#ewriteEngine On
-#RewriteBase /
-
-#RewriteCond %{REQUEST_FILENAME} !-f
 #RewriteCond %{REQUEST_FILENAME} !-d
 #RewriteRule . /
 
-# RewriteCond %{HTTP:Accept-Language} ^([a-z]{2}).*$
-# RewriteRule ^/$ /%1 [R,L]
+# root request = ^$
 
-# RewriteRule ^/$ /en [R,L]
 
-# RewriteRule ^/$ /en [R, L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/([a-z]{2})$
+RewriteCond %{REQUEST_URI} !^/([a-z]{2})/$
+RewriteCond %{HTTP:Accept-Language} ^([a-z]{2}).*$
+RewriteRule ^ /%1 [L,R]
+
+RewriteCond %{REQUEST_URI} !^/([a-z]{2})$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/([a-z]{2})/$
+RewriteCond %{HTTP:Accept-Language} !^([a-z]{2}).*$
+RewriteRule ^ /en [L,R]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ /index.php [L]

@@ -1,5 +1,6 @@
 
 const contentDiv = document.getElementById("content");
+const subheader = document.getElementById("mh4");
 
 const educationMenu = document.getElementById("Education");
 const projectMenu = document.getElementById("Projects");
@@ -217,6 +218,40 @@ if (isMobileDevice()) {
   document.body.classList.add("desktop");
 }
 
+async function fetchDataAndDisplay() {
+  try {
+    const res = await fetch("https://libretranslate.com/translate", {
+      method: "POST",
+      body: JSON.stringify({
+        q: "the dog went to the store",
+        source: "auto",
+        target: "es",
+        format: "text",
+        api_key: ""
+      }),
+      headers: { "Content-Type": "application/json" }
+    });
+
+    if (res.ok) {
+      const xxx = await res.json();
+      const subheader = document.getElementById("mh4");
+
+      if (subheader) {
+        subheader.textContent = "hello: " + xxx;
+      } else {
+        console.log("Element with ID 'mh4' not found.");
+      }
+    } else {
+      console.log("Fetch request failed with status: " + res.status);
+    }
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
+}
+
+fetchDataAndDisplay(); // Call the async function to start the process
+
 
 alert("This website uses Google Analytics and cookies");
 document.body.style.display = "block";
+

@@ -1,3 +1,19 @@
+<?php
+// Get the Accept-Language header
+$acceptLanguageHeader = $_SERVER['REQUEST_URI'];
+
+// Extract the two-letter language code (3 to include /)
+$language_code = substr($acceptLanguageHeader, 0, 3);
+
+// Check if the language code is 'en' (English)
+$command = escapeshellcmd("python3 /var/www/html/translate.py $language_code");
+$output = shell_exec($command);
+echo $output;
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
