@@ -1,32 +1,32 @@
-Personal Website^
-Computer Science Student in San Diego, CA^
-Education^
-Project^
-Research^
-Poll^
-San Diego State University^
-Bachelor of Science, Computer Science^
-August 2019 -> May 2024 (expected)^
-Personal Project - Stock Market Simulator Video Game^
-Easily install and Run on any computer with Java (JDK) installed: ^
-Developed a desktop application in Java that queries live public stock prices and allows users to build a portfolio of mock stocks based on real-time, real-life prices ^
-Frontend GUI created with NetBeans IDE with Java Swift JFrame^
-Live stock prices queried from FinnHub RESTfull API service^
-The original version I wrote for Android mobile devices had 26,000+ unique downloads on the Google Play Store^
-Screenshot of download statistics^
-Paid Undergraduate Research Assistant^
-San Diego State RTEC Lab^
-Research into the new design of Priority-Driven Chain-Aware Scheduling for autonomous vehicles ^
-Successfully bridged the Autoware.Universe software stack with the Carla Simulator, so we can use Python to create custom testing scenarios ^
-Edited C++ source code and analysed ROS2 node graphs to identify the perception pipeline nodes and measure the end-to-end latency ^
-I used Python to graph and visualize the individual node latency measurements ^
-Skills used: Linux System Administration, C++, Python, ROS2 Framework/Middleware ^
-Viewer Poll ^
-Which operating system do you use? (compared to other viewers of aidanswebsite.com) ^
-Mac OS^
-Windows^
-Linux/Unix^
-Chrome OS^
-26,000+ unique downloads (statistics below)^
-** note: This website uses Google Analytics and cookies ** ^
-** note: For language support type ...com/{language code} into the url (ex: es, kk) ** ^
+Personal Website ~~~
+Computer Science Student in San Diego, CA ~~~
+Education ~~~
+Project ~~~
+Research ~~~
+Poll ~~~
+San Diego State University ~~~
+Bachelor of Science, Computer Science ~~~
+August 2019 -> May 2024 (expected) ~~~
+Personal Project - Stock Market Simulator Video Game ~~~
+Easily install and Run on any computer with Java (JDK) installed: ~~~
+Developed a desktop application in Java that queries live public stock prices and allows users to build a portfolio of mock stocks based on real-time, real-life prices ~~~
+Frontend GUI created with NetBeans IDE with Java Swift JFrame ~~~
+Live stock prices queried from FinnHub RESTfull API service ~~~
+The original version I wrote for Android mobile devices had 26,000+ unique downloads on the Google Play Store ~~~
+Screenshot of download statistics ~~~
+Paid Undergraduate Research Assistant ~~~
+San Diego State RTEC Lab ~~~
+Research into the new design of Priority-Driven Chain-Aware Scheduling for autonomous vehicles ~~~
+Successfully bridged the Autoware.Universe software stack with the Carla Simulator, so we can use Python to create custom testing scenarios ~~~
+Edited C++ source code and analysed ROS2 node graphs to identify the perception pipeline nodes and measure the end-to-end latency ~~~
+I used Python to graph and visualize the individual node latency measurements ~~~
+Skills used: Linux System Administration, C++, Python, ROS2 Framework/Middleware ~~~
+Viewer Poll ~~~
+Which operating system do you use? (compared to other viewers of aidanswebsite.com) ~~~
+Mac OS ~~~
+Windows ~~~
+Linux/Unix ~~~
+Chrome OS ~~~
+26,000+ unique downloads (statistics below) ~~~
+** note: This website uses Google Analytics and cookies ** ~~~
+** note: For language support type ...com/{language code} into the url (ex: es, kk) ** ~~~

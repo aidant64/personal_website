@@ -116,7 +116,7 @@ LANGUAGES = {
 }
 
 if first_argument not in LANGUAGES:
-    print("1")
+    print("bad", end="")
     sys.exit(1)
 
 
