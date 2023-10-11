@@ -13,33 +13,38 @@
   </script>
 
   <meta charset="UTF-8" />
-  <?php echo "<title>", $lines[0], "</title>";?>
   <link rel="icon" type="image/jpg" href="/images/favicon.jpg" />
   <link rel="stylesheet" type="text/css" href="/style.css" />
+
+  <?php
+  // Get the Accept-Language header
+  $acceptLanguageHeader = $_SERVER['REQUEST_URI'];
+
+  // Extract the two-letter language code (3 to include /)
+  $language_code = substr($acceptLanguageHeader, 0, 3);
+
+  // Check if the language code is 'en' (English)
+  $command = escapeshellcmd("python3 /var/www/html/translate.py $language_code");
+  $output = shell_exec($command);
+
+  if ($output == "bad") {
+    echo "<p>Language code, ", substr($language_code, 1, 3), " could not be found!<p>";
+    exit;
+  }
+
+  $delim = '~~~';
+  $lines = explode($delim, $output);
+
+  session_start();
+  $_SESSION['lines'] = $lines;
+  ?>
+
+
+  <?php echo "<title>", $lines[0], "</title>";?>
+  
 </head>
 
-<?php
-// Get the Accept-Language header
-$acceptLanguageHeader = $_SERVER['REQUEST_URI'];
 
-// Extract the two-letter language code (3 to include /)
-$language_code = substr($acceptLanguageHeader, 0, 3);
-
-// Check if the language code is 'en' (English)
-$command = escapeshellcmd("python3 /var/www/html/translate.py $language_code");
-$output = shell_exec($command);
-
-if ($output == "bad") {
-  echo "<p>Language code, ", substr($language_code, 1, 3), " could not be found!<p>";
-  exit;
-}
-
-$delim = '~~~';
-$lines = explode($delim, $output);
-
-session_start();
-$_SESSION['lines'] = $lines;
-?>
 
 <body style="display: none;">
   <header>
