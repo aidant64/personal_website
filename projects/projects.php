@@ -27,9 +27,9 @@
 
         <div style="background-color: #16226b; padding: 30px;">
         <?php
-        echo "<p>", $_SESSION['lines'][10], "</p>";
+        echo "<p style='background-color: #16226b;'>", $_SESSION['lines'][10], "</p>";
         ?>
-        <code>git clone https://github.com/aidant64/marketsim.git && cd marketsim/ && javac -d . Main/Main.java && java Main.Main</code>
+        <code style='background-color: #16226b;'>git clone https://github.com/aidant64/marketsim.git && cd marketsim/ && javac -d . Main/Main.java && java Main.Main</code>
         </div>
 
         <?php
