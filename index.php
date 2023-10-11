@@ -8,10 +8,13 @@ $language_code = substr($acceptLanguageHeader, 0, 3);
 // Check if the language code is 'en' (English)
 $command = escapeshellcmd("python3 /var/www/html/translate.py $language_code");
 $output = shell_exec($command);
-echo $output;
+echo "", $output;
+$delim = '&';
+$lines = explode($delim, $output);
 
+session_start();
+$_SESSION['lines'] = $lines;
 ?>
-
 
 
 <!DOCTYPE html>
@@ -37,7 +40,11 @@ echo $output;
 <body style="display: none;">
   <header>
     <h1>Aidan Thomas</h1>
-    <h4 id="mh4"> Computer Science Student in San Diego, CA</h4>
+
+    <?php
+    echo "<h4 id='mh4'>", $lines[0], "</h4>";
+    ?>
+
   </header>
 
   <div class="topnav">

@@ -13,6 +13,10 @@
 
     <div id="Education">
         <h4>Bachelor of Science, Computer Science</h4>
+        <?php
+        session_start();
+        echo "<h4>", $_SESSION['lines'][1], "</h4>";
+        ?>
         <p>August 2019 -> May 2024 (expected)</p>
         <p>GPA: 3.77</p>
         <p>Major GPA: 3.88</p>
