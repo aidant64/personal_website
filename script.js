@@ -219,6 +219,6 @@ if (isMobileDevice()) {
 }
 
 
-alert("This website uses Google Analytics and cookies");
+//alert("This website uses Google Analytics and cookies");
 document.body.style.display = "block";
 

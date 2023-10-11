@@ -8,8 +8,8 @@ $language_code = substr($acceptLanguageHeader, 0, 3);
 // Check if the language code is 'en' (English)
 $command = escapeshellcmd("python3 /var/www/html/translate.py $language_code");
 $output = shell_exec($command);
-echo "", $output;
-$delim = '&';
+
+$delim = '^';
 $lines = explode($delim, $output);
 
 session_start();
@@ -32,7 +32,7 @@ $_SESSION['lines'] = $lines;
   </script>
 
   <meta charset="UTF-8" />
-  <title>Personal Website</title>
+  <?php echo "<title>", $lines[0], "</title>";?>
   <link rel="icon" type="image/jpg" href="/images/favicon.jpg" />
   <link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
@@ -40,18 +40,14 @@ $_SESSION['lines'] = $lines;
 <body style="display: none;">
   <header>
     <h1>Aidan Thomas</h1>
-
-    <?php
-    echo "<h4 id='mh4'>", $lines[0], "</h4>";
-    ?>
-
+    <?php echo "<h4 id='mh4'>$lines[1]</h4>";?>
   </header>
 
   <div class="topnav">
-    <p id="Education">Education</p>
-    <p id="Projects">Project</p>
-    <p id="Research">Research</p>
-    <p id="About">Poll</p>
+    <?php echo "<p id='Education'>$lines[2]</p>"?>
+    <?php echo "<p id='Projects'>$lines[3]</p>"?>
+    <?php echo "<p id='Research'>$lines[4]</p>"?>
+    <?php echo "<p id='About'>$lines[5]</p>"?>
   </div>
 
   <div id="content"></div>
@@ -60,16 +56,18 @@ $_SESSION['lines'] = $lines;
 
     <link rel="stylesheet" type="text/css" href="/poll/style.css" />
     <h2 class="banner">================================================</h2>
-    <h2>Viewer Poll</h2>
+    <?php echo "<h2>$lines[23]</h2>"?>
     <h2 class="banner">================================================</h2>
 
-    <h4>Which operating system do you use? (compared to other viewers of aidanswebsite.com)</h4>
+    <?php echo "<h4>$lines[24]</h4>"?>
 
     <div id="question">
-      <button id="op1">Mac OS</button>
-      <button id="op2">Windows</button>
-      <button id="op3">Linux/Unix</button>
-      <button id="op4">Chrome OS</button>
+      <?php 
+      echo "<button id='op1'>$lines[25]</button>";
+      echo "<button id='op2'>$lines[26]</button>";
+      echo "<button id='op3'>$lines[27]</button>";
+      echo "<button id='op4'>$lines[28]</button>";
+      ?>
     </div>
 
 

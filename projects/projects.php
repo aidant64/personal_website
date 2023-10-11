@@ -12,38 +12,49 @@
 
 <body>
     <h2 class="banner">================================================</h2>
-    <h2>Personal Project - Stock Market Simulator Video Game</h2>
+    <?php
+    session_start();
+    echo "<h2>", $_SESSION['lines'][9], "</h2>"; 
+    ?>
     <h2 class="banner">================================================</h2>
 
     <a href="https://github.com/aidant64/marketsim">github.com/aidant64/marketsim</a>
-
+    
+    <?php
+    echo "<p>", $_SESSION['lines'][29], "</p>"; 
+    ?>
     <div>
-        <p>26,000+ unique downloads (statistics below)</p>
 
         <div style="background-color: #16226b; padding: 30px;">
-            <p>Easily install and Run on any computer with Java (JDK) installed:</p>
-            <code>git clone https://github.com/aidant64/marketsim.git && cd marketsim/ && javac -d . Main/Main.java && java Main.Main</code>
+        <?php
+        echo "<p>", $_SESSION['lines'][10], "</p>";
+        ?>
+        <code>git clone https://github.com/aidant64/marketsim.git && cd marketsim/ && javac -d . Main/Main.java && java Main.Main</code>
         </div>
 
-        <p>
-            Developed a desktop application in Java that queries live public stock prices and allows users to build a
-            portfolio of mock stocks based on real-time, real-life prices</p>
+        <?php
+        echo "<p>", $_SESSION['lines'][11], "</p>"; 
+        ?>
 
         <img src="/images/basic.png" alt="(Unable to Load Image)" />
 
-
-        <p> Frontend GUI created with NetBeans IDE with Java Swift JFrame </p>
-        <p> Live stock prices queried from FinnHub RESTfull API service </p>
-
+        <?php
+        echo "<p>", $_SESSION['lines'][12], "</p>"; 
+        echo "<p>", $_SESSION['lines'][13], "</p>"; 
+        ?>
+        
         <img src="/images/reset.png" alt="(Unable to Load Image)" />
 
 
-        <p>The original version I wrote for Android mobile devices had 26,000+ unique downloads on the Google
-            Play Store</p>
+        <?php
+        echo "<p>", $_SESSION['lines'][14], "</p>"; 
+        ?>
 
         <img src="/images/UserInstalls/installs.png" alt="(Unable to Load Image)" />
 
-        <p>Screenshot of download statistics</p>
+        <?php
+        echo "<p>", $_SESSION['lines'][15], "</p>"; 
+        ?>
     </div>
 </body>
 

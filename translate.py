@@ -120,17 +120,9 @@ if first_argument not in LANGUAGES:
     sys.exit(1)
 
 
-lines = []
-with open("/var/www/html/lines.txt", "r") as file:
-    lines = file.readlines()
+trans_lines = GoogleTranslator(source="en", target=first_argument).translate_file(
+    "/var/www/html/lines.txt"
+)
 
-trans_lines = ""
-for line in lines:
-    trans_lines = (
-        trans_lines
-        + GoogleTranslator(source="en", target=first_argument).translate(line.strip())
-        + "&"
-    )
-
-return_val = trans_lines[:-1]
-print(return_val)
+# return_val = trans_lines[:-1]
+print(trans_lines)
