@@ -18,10 +18,10 @@
         
         <?php
         echo "<h4>", $_SESSION['lines'][7], "</h4>";
-        echo "<p>", $_SESSION['lines'][8], "</p>"
+        echo "<p>", $_SESSION['lines'][8], "</p>";
+        echo "<p>GPA: 3.77<p>";
+        echo "<p>", $_SESSION['lines'][33], " GPA: 3.88</p>";
         ?>
-        <p>GPA: 3.77</p>
-        <p>Major GPA: 3.88</p>
     </div>
 
     <div>
@@ -29,7 +29,8 @@
         <br>
     <?php
         echo "<p>", $_SESSION['lines'][30], "</p>";
-        echo "<p>", $_SESSION['lines'][31], "</p>"
+        echo "<p>", $_SESSION['lines'][31], "</p>";
+        echo "<p>", $_SESSION['lines'][32], "</p>";
         ?>
     <div>
 </body>

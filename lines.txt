@@ -29,4 +29,6 @@ Linux/Unix
 Chrome OS 
 26,000+ unique downloads (statistics below) 
 ** note: This website uses Google Analytics and cookies ** 
-** note: For language support type ...com/{language code} into the url (ex: es, kk) ** 
+** note: For language support type ...com/{language code} into the url (ex: es, kk, ja) **
+** note: Your default language from your browser's accept-language HTTP header should be automatically used **
+Major
