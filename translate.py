@@ -115,14 +115,16 @@ LANGUAGES = {
     "zu": "zulu",
 }
 
+filepath = '/var/www/html/lines.txt'
+
 if first_argument not in LANGUAGES:
     print("bad", end="")
     sys.exit(1)
 
+trans_lines = GoogleTranslator(source="en", target=first_argument).translate_file("/var/www/html/lines.txt")
+translated_lines = trans_lines.split('\n')
 
-trans_lines = GoogleTranslator(source="en", target=first_argument).translate_file(
-    "/var/www/html/lines.txt"
-)
+for line in translated_lines:
+    print(line, end="")
+    print("^^", end="")
 
-# return_val = trans_lines[:-1]
-print(trans_lines)

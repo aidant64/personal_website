@@ -32,7 +32,7 @@
     exit;
   }
 
-  $delim = '~~~';
+  $delim = '^^';
   $lines = explode($delim, $output);
 
   session_start();
