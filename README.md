@@ -11,7 +11,7 @@
  - rewriteEngine used to direct all requests to https://www.aidanswebsite.com
      - http -> https
      - aidanswebsite.com -> www.aidanswebsite.com
-     - .com/* -> ./com/{preferred language code}
+     - .com/\* -> ./com/{preferred language code}
       
  - Python Deep_Translate package used for translation based on 2-char language code
  - Simple python used to update and write poll responses to disk
