@@ -41,7 +41,7 @@ function checkAnswered() {
   x = parseInt(x, 10);
 
   const my_url = '/poll/data'
-  fetch(my_url)
+  fetch(my_url, { cache: 'no-cache' })
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -119,7 +119,7 @@ function handleButtonClick(buttonId) {
   op4.disabled = true;
 
   const my_url = '/poll/graph.py?a=' + buttonId;
-  fetch(my_url)
+  fetch(my_url, { cache: 'no-cache' })
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');

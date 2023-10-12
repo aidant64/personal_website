@@ -21,3 +21,7 @@ RewriteRule ^ /en [L,R]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ /index.php [L]
+
+<Files "/poll/data">
+    Header set Cache-Control "no-cache"
+</Files>
