@@ -2,6 +2,10 @@
   background-color: #190126;
 }
 
+h2 {
+  text-decoration: underline;
+}
+
 body {
   float: center;
   padding: 0px;

@@ -5,12 +5,10 @@
 </head>
 
 <body>
-    <h2 class="banner">================================================</h2>
     <?php
         session_start();
         echo "<h2>", $_SESSION['lines'][16], "</h2>"; 
         ?>
-    <h2 class="banner">================================================</h2>
 
     <a href="https://rtec.sdsu.edu">rtec.sdsu.edu/</a>
 

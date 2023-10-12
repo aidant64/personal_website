@@ -11,12 +11,10 @@
 </head>
 
 <body>
-    <h2 class="banner">================================================</h2>
     <?php
     session_start();
     echo "<h2>", $_SESSION['lines'][9], "</h2>"; 
     ?>
-    <h2 class="banner">================================================</h2>
 
     <a href="https://github.com/aidant64/marketsim">github.com/aidant64/marketsim</a>
     

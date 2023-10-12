@@ -39,11 +39,8 @@
   $_SESSION['lines'] = $lines;
   ?>
 
-
   <?php echo "<title>", $lines[0], "</title>";?>
-  
 </head>
-
 
 
 <body style="display: none;">
@@ -64,9 +61,8 @@
   <div id="poll">
 
     <link rel="stylesheet" type="text/css" href="/poll/style.css" />
-    <h2 class="banner">================================================</h2>
     <?php echo "<h2>$lines[23]</h2>"?>
-    <h2 class="banner">================================================</h2>
+    <a href="mailto:aidanthomas128@gmail.com">aidanthomas128@gmail.com</a>
 
     <?php echo "<h4>$lines[24]</h4>"?>
 
