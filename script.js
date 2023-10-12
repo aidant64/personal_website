@@ -140,8 +140,8 @@ function handleButtonClick(buttonId) {
 }
 
 
-
 function educationMenuPress() {
+  sessionStorage.setItem("position", 0);
   deselectAll();
   educationMenu.classList.add('selected');
   messageDiv.style.display = "none";
@@ -158,6 +158,7 @@ function educationMenuPress() {
 
 
 function projectMenuPress() {
+  sessionStorage.setItem("position", 1);
   deselectAll();
   projectMenu.classList.add('selected');
   messageDiv.style.display = "none";
@@ -173,6 +174,7 @@ function projectMenuPress() {
 }
 
 function researchMenuPress() {
+  sessionStorage.setItem("position", 2);
   deselectAll();
   researchMenu.classList.add('selected');
   messageDiv.style.display = "none";
@@ -188,6 +190,7 @@ function researchMenuPress() {
 }
 
 function aboutMenuPress() {
+  sessionStorage.setItem("position", 3);
   deselectAll();
   aboutMenu.classList.add('selected');
   messageDiv.style.display = "block";
@@ -204,20 +207,22 @@ function deselectAll() {
   aboutMenu.classList.remove('selected');
 }
 
+function findPosition() {
+  const position = sessionStorage.getItem("position");
+
+  if (position == null || position == 0) {
+    educationMenuPress();
+  } else if (position == 1) {
+    projectMenuPress();
+  } else if (position == 2) {
+    researchMenuPress();
+  } else if (position == 3) {
+    aboutMenuPress();
+  }
+}
 
 messageDiv.style.display = "none";
-educationMenuPress();
-
-function isMobileDevice() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
-
-if (isMobileDevice()) {
-  document.body.classList.add("mobile");
-} else {
-  document.body.classList.add("desktop");
-}
-
+findPosition();
 
 //alert("This website uses Google Analytics and cookies");
 document.body.style.display = "block";

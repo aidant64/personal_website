@@ -1,0 +1,61 @@
+* {
+    background-color: #190126;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+body {
+    float: center;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    background-color: #190126;
+    color: white;
+    text-align: center;
+}
+
+
+img {
+    font-size: 0;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    display: inline-block;
+}
+
+div {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+}
+
+a {
+    color: orange;
+}
+
+a:active {
+    color: red;
+}
+
+.navitem {
+    background-color: #15031f;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.topnav p:hover {
+    background-color: #949393 !important;
+    color: black !important;
+    cursor: pointer;
+}
+
+.selected {
+    color: black !important;
+    background-color: white !important;
+}
+
+#messageHtml {
+    display: none;
+}
