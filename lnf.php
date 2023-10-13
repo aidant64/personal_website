@@ -1,9 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body style='background-color: #190126;'>
+
 <?php
-echo "<!DOCTYPE html>";
-echo "<html>";
-echo "<body style='background-color: #190126;'>";
 echo "<p style='color: #FFF;'>python: Language code, ", $urlParts[0], ", could not be found!<p>";
 echo "<br>";
+echo "<a style='color: orange;' href='https://www.aidanswebsite.com/$lanCode'>Click here for preferred language</a>";
+echo "<br>";
+echo "<a style='color: orange;' href='https://www.aidanswebsite.com/es'>Click here for Spanish</a>";
+echo "<br>";
+echo "<a style='color: orange;' href='https://www.aidanswebsite.com/en-US'>Click here for English</a>";
 echo "<br>";
 $lans = array(
     "en-US ->english-us",
@@ -119,10 +125,7 @@ foreach ($lans as $element) {
     echo "<p style='color: white;'>$element</p>";
 }
 
-echo "</body>";
-echo "</html>";
-
-
-
 ?>
 
+</body>
+</html>
