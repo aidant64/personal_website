@@ -1,26 +1,23 @@
 RewriteEngine On
 
-#RewriteCond %{REQUEST_FILENAME} !-d
-#RewriteRule . /
+#RewriteRule home /index.php [R=301]
 
-# root request = ^$
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_URI} !^/([a-z]{2})$
+#RewriteCond %{REQUEST_URI} !^/([a-z]{2})/$
+#RewriteCond %{HTTP:Accept-Language} ^([a-z]{2}).*$
+#RewriteRule ^ /%1 [L,R]
 
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} !^/([a-z]{2})$
-RewriteCond %{REQUEST_URI} !^/([a-z]{2})/$
-RewriteCond %{HTTP:Accept-Language} ^([a-z]{2}).*$
-RewriteRule ^ /%1 [L,R]
-
-RewriteCond %{REQUEST_URI} !^/([a-z]{2})$
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} !^/([a-z]{2})/$
-RewriteCond %{HTTP:Accept-Language} !^([a-z]{2}).*$
-RewriteRule ^ /en [L,R]
+#RewriteCond %{REQUEST_URI} !^/([a-z]{2})$
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_URI} !^/([a-z]{2})/$
+#RewriteCond %{HTTP:Accept-Language} !^([a-z]{2}).*$
+#RewriteRule ^ /en [L,R]
 
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ /index.php [L]
+RewriteRule ^(.*)$ router.php [L]
+#RewriteRule ^ /index.php [L]
 
 <Files "/poll/data">
     Header set Cache-Control "no-cache"

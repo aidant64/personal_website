@@ -38,36 +38,18 @@
     echo "<link rel='stylesheet' type='text/css' href='/css/desktop.css'/>";
   }
 
-  // Get the Accept-Language header
-  $acceptLanguageHeader = $_SERVER['REQUEST_URI'];
-
-  // Extract the two-letter language code (3 to include /)
-  $language_code = substr($acceptLanguageHeader, 0, 3);
-
-  // Check if the language code is 'en' (English)
-  $command = escapeshellcmd("python3 /var/www/html/translate.py $language_code");
-  $output = shell_exec($command);
-
-  if ($output == "bad") {
-    echo "<p>Language code, ", substr($language_code, 1, 3), " could not be found!<p>";
-    exit;
-  }
-
-  $delim = '^^';
-  $lines = explode($delim, $output);
-
   session_start();
-  $_SESSION['lines'] = $lines;
+
+  echo "<title>", $lines[0], "</title>";
   ?>
 
-  <?php echo "<title>", $lines[0], "</title>"; ?>
 </head>
 
 
 <body style="display: none;">
   <header>
     <h1>Aidan Thomas</h1>
-    <?php echo "<p id='mh4'>$lines[1]</p>"; ?>
+    <?php echo "<p id='mh4'>$lines[1]</p>" ?>
   </header>
 
   <div class="topnav">

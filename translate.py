@@ -3,9 +3,11 @@
 import sys
 from deep_translator import GoogleTranslator
 
-first_argument = sys.argv[1][1:]
+first_argument = sys.argv[1]
 
 LANGUAGES = {
+    "en-US": "english-us",
+    "en-UK": "english-uk",
     "af": "afrikaans",
     "sq": "albanian",
     "am": "amharic",
@@ -121,10 +123,12 @@ if first_argument not in LANGUAGES:
     print("bad", end="")
     sys.exit(1)
 
+if(first_argument == 'en-US' or first_argument == 'en-UK'):
+    first_argument = 'en'
+
 trans_lines = GoogleTranslator(source="en", target=first_argument).translate_file("/var/www/html/lines.txt")
 translated_lines = trans_lines.split('\n')
 
 for line in translated_lines:
     print(line, end="")
     print("^^", end="")
-
