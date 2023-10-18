@@ -169,7 +169,7 @@
   echo "<div class='dropdown'>";
   echo "<button class='material-symbols-outlined dropbtn'>globe_asia</button>";
   echo "<div class='dropdown-content'>";
-  echo "<a href='/'>preferred</a>";
+  echo "<a href='/'>preferred -></a>";
   foreach ($lans as $element) {
     $part = explode(" ", $element)[0];
     echo "<a href='/$part'>$element</a>";
