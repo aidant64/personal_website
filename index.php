@@ -15,6 +15,9 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/jpg" href="/images/favicon.jpg" />
   <link rel='stylesheet' type='text/css' href='/css/style.css' />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 
   <?php
 
@@ -38,19 +41,148 @@
     echo "<link rel='stylesheet' type='text/css' href='/css/desktop.css'/>";
   }
 
+
   session_start();
 
   echo "<title>", $lines[0], "</title>";
   ?>
 
+
+  <link rel='stylesheet' type='text/css' href='/css/dropdown.css' />
+
 </head>
 
 
 <body style="display: none;">
-  <header>
+  <?php
+  $lans = array(
+    "en ->english",
+    "af ->afrikaans",
+    "sq ->albanian",
+    "am ->amharic",
+    "ar ->arabic",
+    "hy ->armenian",
+    "az ->azerbaijani",
+    "eu ->basque",
+    "be ->belarusian",
+    "bn ->bengali",
+    "bs ->bosnian",
+    "bg ->bulgarian",
+    "ca ->catalan",
+    "ceb ->cebuano",
+    "ny ->chichewa",
+    "co ->corsican",
+    "hr ->croatian",
+    "cs ->czech",
+    "da ->danish",
+    "nl ->dutch",
+    "en-US ->english-us",
+    "en-UK ->english-uk",
+    "eo ->esperanto",
+    "et ->estonian",
+    "tl ->filipino",
+    "fi ->finnish",
+    "fr ->french",
+    "fy ->frisian",
+    "gl ->galician",
+    "ka ->georgian",
+    "de ->german",
+    "el ->greek",
+    "gu ->gujarati",
+    "ht ->haitian creole",
+    "ha ->hausa",
+    "haw ->hawaiian",
+    "iw ->hebrew",
+    "he ->hebrew",
+    "hi ->hindi",
+    "hmn ->hmong",
+    "hu ->hungarian",
+    "is ->icelandic",
+    "ig ->igbo",
+    "id ->indonesian",
+    "ga ->irish",
+    "it ->italian",
+    "ja ->japanese",
+    "jw ->javanese",
+    "kn ->kannada",
+    "kk ->kazakh",
+    "km ->khmer",
+    "ko ->korean",
+    "ku ->kurdish (kurmanji)",
+    "ky ->kyrgyz",
+    "lo ->lao",
+    "la ->latin",
+    "lv ->latvian",
+    "lt ->lithuanian",
+    "lb ->luxembourgish",
+    "mk ->macedonian",
+    "mg ->malagasy",
+    "ms ->malay",
+    "ml ->malayalam",
+    "mt ->maltese",
+    "mi ->maori",
+    "mr ->marathi",
+    "mn ->mongolian",
+    "my ->myanmar (burmese)",
+    "ne ->nepali",
+    "no ->norwegian",
+    "or ->odia",
+    "ps ->pashto",
+    "fa ->persian",
+    "pl ->polish",
+    "pt ->portuguese",
+    "pa ->punjabi",
+    "ro ->romanian",
+    "ru ->russian",
+    "sm ->samoan",
+    "gd ->scots gaelic",
+    "sr ->serbian",
+    "st ->sesotho",
+    "sn ->shona",
+    "sd ->sindhi",
+    "si ->sinhala",
+    "sk ->slovak",
+    "sl ->slovenian",
+    "so ->somali",
+    "es ->spanish",
+    "su ->sundanese",
+    "sw ->swahili",
+    "sv ->swedish",
+    "tg ->tajik",
+    "ta ->tamil",
+    "te ->telugu",
+    "th ->thai",
+    "tr ->turkish",
+    "uk ->ukrainian",
+    "ur ->urdu",
+    "ug ->uyghur",
+    "uz ->uzbek",
+    "vi ->vietnamese",
+    "cy ->welsh",
+    "xh ->xhosa",
+    "yi ->yiddish",
+    "yo ->yoruba",
+    "zu ->zulu"
+  );
+
+
+  echo "<div class='dropdown'>";
+  echo "<button class='material-symbols-outlined dropbtn'>globe_asia</button>";
+  echo "<div class='dropdown-content'>";
+  echo "<a href='/'>preferred</a>";
+  foreach ($lans as $element) {
+    $part = explode(" ", $element)[0];
+    echo "<a href='/$part'>$element</a>";
+  }
+  echo "</div>";
+  echo "</div>";
+  ?>
+
+
+  <div>
     <h1>Aidan Thomas</h1>
     <?php echo "<p id='mh4'>$lines[1]</p>" ?>
-  </header>
+  </div>
 
   <div class="topnav">
     <?php echo "<p class='navitem' id='Education'>$lines[2]</p>" ?>

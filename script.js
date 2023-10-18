@@ -223,7 +223,7 @@ function findPosition() {
 
 messageDiv.style.display = "none";
 findPosition();
-
-//alert("This website uses Google Analytics and cookies");
 document.body.style.display = "block";
+
+
 
