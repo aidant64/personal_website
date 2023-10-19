@@ -10,7 +10,7 @@
     echo "<h2>", $_SESSION['lines'][16], "</h2>";
     ?>
 
-    <a href="https://rtec.sdsu.edu">rtec.sdsu.edu/</a>
+    <a href="https://rtec.sdsu.edu">Lab Website</a>
 
     <?php
     echo "<h4>", $_SESSION['lines'][17], "</h4>";

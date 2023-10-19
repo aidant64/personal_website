@@ -98,13 +98,13 @@ function updateGraphColors(buttonID) {
 
 
   if (buttonID == 1) {
-    op1.style.backgroundColor = "RED";
+    op1.style.backgroundColor = "PURPLE";
   } else if (buttonID == 2) {
-    op2.style.backgroundColor = "RED";
+    op2.style.backgroundColor = "PURPLE";
   } else if (buttonID == 3) {
-    op3.style.backgroundColor = "RED";
+    op3.style.backgroundColor = "PURPLE";
   } else {
-    op4.style.backgroundColor = "RED";
+    op4.style.backgroundColor = "PURPLE";
   }
 }
 
@@ -224,6 +224,3 @@ function findPosition() {
 messageDiv.style.display = "none";
 findPosition();
 document.body.style.display = "block";
-
-
-

@@ -1,5 +1,5 @@
 * {
-    background-color: #190126;
+    background-color: #dbdbdb;
 }
 
 h2 {
@@ -11,9 +11,10 @@ body {
     padding: 0px;
     border: 0px;
     margin: 0px;
-    background-color: #190126;
-    color: white;
+    background-color: #dbdbdb;
+    color: black;
     text-align: center;
+    overflow-y: scroll;
 }
 
 
@@ -31,16 +32,16 @@ div {
     margin: 0px;
 }
 
-a {
+/* a {
     color: orange;
 }
 
 a:active {
     color: red;
-}
+} */
 
 .navitem {
-    background-color: #15031f;
+    background-color: rgb(105, 105, 105);
     margin-left: 5px;
     margin-right: 5px;
 }

@@ -25,7 +25,7 @@
 
         <div style="background-color: #16226b; padding: 30px;">
             <?php
-            echo "<p style='background-color: #16226b;'>", $_SESSION['lines'][10], "</p>";
+            echo "<p style='background-color: #16226b; color: white;'>", $_SESSION['lines'][10], "</p>";
             ?>
 
 

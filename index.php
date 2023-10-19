@@ -56,7 +56,8 @@
 <body style="display: none;">
   <?php
   $lans = array(
-    "en ->english",
+    "en -> english",
+    "es -> spanish",
     "af ->afrikaans",
     "sq ->albanian",
     "am ->amharic",
@@ -165,19 +166,33 @@
     "zu ->zulu"
   );
 
+  $url = $_SERVER['REQUEST_URI'];
+  $languageURL = explode('/', trim($url, '/'))[0];
+  $acceptLanguageHeader = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+  $lanHeader = explode(',', trim($acceptLanguageHeader, ','))[0];
 
   echo "<div class='dropdown'>";
   echo "<button class='material-symbols-outlined dropbtn'>globe_asia</button>";
   echo "<div class='dropdown-content'>";
-  echo "<a href='/'>preferred -></a>";
+
+  if ($languageURL === $lanHeader) {
+    echo "<a href='/' style='background-color: grey;'>preferred</a>";
+  } else {
+    echo "<a href='/'>preferred</a>";
+  }
+
   foreach ($lans as $element) {
-    $part = explode(" ", $element)[0];
-    echo "<a href='/$part'>$element</a>";
+    $code = explode(" ->", $element)[0];
+    $name = explode(" ->", $element)[1];
+    if ($code == $languageURL) {
+      echo "<a href='/$code' style='background-color: grey;'>$name</a>";
+    } else {
+      echo "<a href='/$code'>$name</a>";
+    }
   }
   echo "</div>";
   echo "</div>";
   ?>
-
 
   <div>
     <h1>Aidan Thomas</h1>
