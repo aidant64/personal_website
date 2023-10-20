@@ -4,7 +4,7 @@ import cgi
 import cgitb; cgitb.enable() 
 
 data = []
-with open('/var/www/html/poll/data', 'r') as file:
+with open('/var/www/html/personal/poll/data', 'r') as file:
     data = file.read().split(',')
 
 for i in range(0, 4):
@@ -20,7 +20,7 @@ for i in range(0, 4):
     if i == index:
         data[i] = data[i] + 1
 
-with open('/var/www/html/poll/data', 'w') as file:
+with open('/var/www/html/personal/poll/data', 'w') as file:
     for i in range(0, 4):
         file.write(str(data[i]))
         if(i != 3):

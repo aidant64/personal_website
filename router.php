@@ -162,7 +162,7 @@ if ($urlParts[0] == null) {
 	}
 }
 
-$command = escapeshellcmd("python3 /var/www/html/translate.py $urlParts[0]");
+$command = escapeshellcmd("python3 /var/www/html/personal/translate.py $urlParts[0]");
 $output = shell_exec($command);
 
 if ($output == "bad") {

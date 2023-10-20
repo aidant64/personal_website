@@ -14,4 +14,5 @@ scp -r "${tmp:?}/"* "${tmp:?}"/.htaccess aws:/home/ubuntu/personal_website/
 
 rm -rf "$tmp"
 
-ssh aws "sudo cp /var/www/html/poll/data personal_website/poll/ && sudo cp -r /var/www/html/images ~/personal_website/ && sudo rm -rf /var/www/html/* && sudo cp -r personal_website/* /var/www/html/ && sudo cp personal_website/.htaccess /var/www/html && sudo rm -rf personal_website/ && sudo chmod 777 /var/www/html/poll/data"
+ssh aws "sudo cp /var/www/html/personal/poll/data personal_website/poll/ && sudo cp -r /var/www/html/personal/images ~/personal_website/"
+ssh aws "sudo rm -rf /var/www/html/personal/* && sudo cp -r personal_website/* /var/www/html/personal/ && sudo cp personal_website/.htaccess /var/www/html/personal && sudo rm -rf personal_website/ && sudo chmod 777 /var/www/html/personal/poll/data"

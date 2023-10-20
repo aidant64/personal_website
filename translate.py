@@ -117,7 +117,7 @@ LANGUAGES = {
     "zu": "zulu",
 }
 
-filepath = '/var/www/html/lines.txt'
+filepath = '/var/www/html/personal/lines.txt'
 
 if first_argument not in LANGUAGES:
     print("bad", end="")
@@ -126,7 +126,7 @@ if first_argument not in LANGUAGES:
 if(first_argument == 'en-US' or first_argument == 'en-UK'):
     first_argument = 'en'
 
-trans_lines = GoogleTranslator(source="en", target=first_argument).translate_file("/var/www/html/lines.txt")
+trans_lines = GoogleTranslator(source="en", target=first_argument).translate_file("/var/www/html/personal/lines.txt")
 translated_lines = trans_lines.split('\n')
 
 for line in translated_lines:
