@@ -10,7 +10,7 @@
     echo "<h2>", $_SESSION['lines'][6], "</h2>";
     ?>
 
-    <a href="https://www.linkedin.com/in/aidanthomas128">linkedIn</a>
+    <a href="https://www.linkedin.com/in/aidanthomas128">LinkedIn</a>
 
     <div id="Education">
 
