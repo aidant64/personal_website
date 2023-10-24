@@ -41,14 +41,18 @@
     echo "<link rel='stylesheet' type='text/css' href='/css/desktop.css'/>";
   }
 
-
   session_start();
 
   echo "<title>", $lines[0], "</title>";
+
+  if (isMobileDevice()) {
+    echo "<link rel='stylesheet' type='text/css' href='/css/dropdown_mobile.css'/>";
+  } else {
+    echo "<link rel='stylesheet' type='text/css' href='/css/dropdown.css'/>";
+  }
   ?>
 
 
-  <link rel='stylesheet' type='text/css' href='/css/dropdown.css' />
 
 </head>
 
