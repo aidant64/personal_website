@@ -6,7 +6,7 @@ Research
 Poll 
 San Diego State University 
 Bachelor of Science, Computer Science 
-August 2019 -> May 2024 (expected) 
+August 2019 → May 2024 (expected) 
 Personal Project - Stock Market Simulator Video Game 
 Easily install and Run on any computer with Java (JDK) installed: 
 Developed a desktop application in Java that queries live public stock prices and allows users to build a portfolio of mock stocks based on real-time, real-life prices 
