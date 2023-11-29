@@ -11,6 +11,12 @@ code_map = {
     'co': '46054'
 }
 
+loc_map = {
+    'sb': 'Santa Barbara',
+    'ch': 'Santa Cruz Channel',
+    'co': 'Point Conception'
+}
+
 response = requests.get("https://www.ndbc.noaa.gov/data/realtime2/" + code_map[sys.argv[1]] + ".txt")
 
 lines = response.text.split('\n')
@@ -27,13 +33,12 @@ firstLine = [elem for elem in lines[2].split(' ') if elem != '']
 
 day = int(firstLine[2])
 hour = int(firstLine[3]) - 8
-if(hour == 0):
-    day = day - 1
 if(hour < 0):
     hour = hour + 24
     day = day - 1
 
 time = firstLine[1] + "/" + str(day) + "/" + firstLine[0] + " " + str(hour) + ":" + firstLine[4] + " PST"
+time = time + " - " + str(loc_map[sys.argv[1]])
 
 for i in range(2, 10):
     line = [elem for elem in lines[i].split(' ') if elem != '']
@@ -67,8 +72,8 @@ if(waveDir == -1):
     waveDir = "--.-"
 
 l1 = "Direction: " + str(windDir) + "\u00B0T"
-l2 = "Wind Speed: " + str(float(wind) * 1.94384) + " kn"
-l3 = "Gusts: " + str(float(gust) * 1.94384) + " kn"
+l2 = "Wind Speed: " + str(round((float(wind) * 1.94384), 1)) + " kn"
+l3 = "Gusts: " + str(round((float(gust) * 1.94384), 1)) + " kn"
 col1 = l1 + "<br><br>" + l2 + "<br><br>" + l3
 
 w1 = "Wave Height: " + str(waveHeigh) + " m"
