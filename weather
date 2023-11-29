@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('./images/map.png');
+            background-size: 100vw 110vh;
+            background-position: top;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 1;
+        }
+
+        .bu {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: red;
+            position: fixed;
+        }
+
+        .bu:hover {
+            background-color: orange;
+            cursor: pointer;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 100%;
+        }
+
+        #sb {
+            top: 21vh;
+            left: 64vw;
+        }
+
+        #ch {
+            top: 38vh;
+            left: 54vw;
+        }
+
+        #co {
+            top: 31vh;
+            left: 11vw;
+        }
+
+        #la {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background-color: white;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <div id="la">
+            <h3 id="tit">Live Weather readings from NOAA</h3>
+
+            <div class="grid">
+
+                <div>
+                    <p id="wind">wind</p>
+                </div>
+                <div>
+                    <p id="wave">waves </p>
+                </div>
+
+            </div>
+        </div>
+
+        <button id="sb" class="bu"></button>
+        <button id="ch" class="bu"></button>
+        <button id="co" class="bu"></button>
+
+        <script>
+            const buttons = document.querySelectorAll('.bu');
+
+            const tit = document.getElementById('tit');
+            const wind = document.getElementById('wind');
+            const wave = document.getElementById('wave');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', buttonClick);
+            });
+
+            function buttonClick(event) {
+                const url = "./api/weather.bash?loc=" + event.target.id;
+                //wind.textContent = x;
+
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        tit.innerHTML = data.tit;
+                        wind.innerHTML = data.col1;
+                        wave.innerHTML = data.col2;
+                    })
+                    .catch(error => {
+                        console.error('There was a problem with the fetch operation:', error);
+                    });
+            }
+
+        </script>
+    </main>
+
+</body>
+
+</html>
