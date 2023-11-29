@@ -27,10 +27,11 @@ firstLine = [elem for elem in lines[2].split(' ') if elem != '']
 
 day = int(firstLine[2])
 hour = int(firstLine[3]) - 8
+if(hour == 0):
+    day = day - 1
 if(hour < 0):
     hour = hour + 24
     day = day - 1
-
 
 time = firstLine[1] + "/" + str(day) + "/" + firstLine[0] + " " + str(hour) + ":" + firstLine[4] + " PST"
 
