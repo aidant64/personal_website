@@ -25,11 +25,14 @@ waveDir = -1
 
 firstLine = [elem for elem in lines[2].split(' ') if elem != '']
 
+day = int(firstLine[2])
 hour = int(firstLine[3]) - 8
 if(hour < 0):
     hour = hour + 24
+    day = day - 1
 
-time = firstLine[1] + "/" + firstLine[2] + "/" + firstLine[0] + " " + str(hour) + ":" + firstLine[4] + " PST"
+
+time = firstLine[1] + "/" + str(day) + "/" + firstLine[0] + " " + str(hour) + ":" + firstLine[4] + " PST"
 
 for i in range(2, 10):
     line = [elem for elem in lines[i].split(' ') if elem != '']
