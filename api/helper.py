@@ -4,6 +4,18 @@ import requests
 import sys
 import json
 
+def compass_heading(degrees):
+    directions = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
+
+    # Normalize degrees to ensure it falls between 0 and 360
+    degrees %= 360
+
+    # Calculate the index for the direction based on the degree range
+    index = round(degrees / (360.0 / len(directions))) % len(directions)
+
+    return directions[index]
+
+
 
 code_map = {
     'sb': 'NTBC1',
@@ -57,6 +69,11 @@ for i in range(2, 10):
     if(line[11] != 'MM' and waveDir == -1):
         waveDir = line[11]    
 
+if(waveHeigh != -1):
+    waveHeigh = round(float(waveHeigh) * 3.28084, 1)
+if(waveDir != -1):
+    waveDir = str(compass_heading(float(waveDir))) + " (" + str(waveDir) + "\u00B0T)"
+
 if(windDir == -1):
     windDir = "--.-"
 if(wind == -1):
@@ -69,16 +86,16 @@ if(waveHeigh == -1):
 if(avePeriod == -1):
     avePeriod = "--.-"
 if(waveDir == -1):
-    waveDir = "--.-"
+    waveDir = "--.- \u00B0T"
 
-l1 = "Direction: " + str(windDir) + "\u00B0T"
+l1 = "Direction: " + str(compass_heading(float(windDir))) + " ("  + str(windDir) + "\u00B0T)"
 l2 = "Wind Speed: " + str(round((float(wind) * 1.94384), 1)) + " kn"
 l3 = "Gusts: " + str(round((float(gust) * 1.94384), 1)) + " kn"
-col1 = l1 + "<br><br>" + l2 + "<br><br>" + l3
+col1 = l2 + "<br><br>" + l3 + "<br><br>" + l1
 
-w1 = "Wave Height: " + str(waveHeigh) + " m"
+w1 = "Wave Height: " + str(waveHeigh) + " ft"
 w2 = "Ave Period: " + str(avePeriod) + " sec"
-w3 = "Direction: " + str(waveDir) + "\u00B0T"
+w3 = "Direction: " + str(waveDir)
 col2 = w1 + "<br><br>" + w2 + "<br><br>" + w3
 
 data = {
@@ -92,3 +109,4 @@ print("Content-Type: application/json")
 print()
 print()
 print(json_data)
+

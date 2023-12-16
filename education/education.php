@@ -31,6 +31,8 @@
         echo "<p>", $_SESSION['lines'][32], "</p>";
         ?>
         <div>
+
+            <a href="https://www.aidanswebsite.com/weather">aidanswebsite.com/weather (SURF REPORT)</a>
 </body>
 
 

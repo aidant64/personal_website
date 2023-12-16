@@ -57,8 +57,6 @@
             background-color: white;
             padding: 50px;
         }
-
-
     </style>
 </head>
 
@@ -72,10 +70,10 @@
             <div class="grid">
 
                 <div>
-                    <p id="wind">   </p>
+                    <p id="wind"> </p>
                 </div>
                 <div>
-                    <p id="wave">   </p>
+                    <p id="wave"> </p>
                 </div>
 
             </div>
@@ -98,9 +96,9 @@
 
             function buttonClick(event) {
                 const url = "./api/weather.bash?loc=" + event.target.id;
-		tit.innerHTML = "loading...";
-		wind.innerHTML = "<br><br><br><br><br>";
-		wave.innerHTML = "";
+                tit.innerHTML = "loading...";
+                wind.innerHTML = "<br><br><br><br><br>";
+                wave.innerHTML = "";
 
                 fetch(url)
                     .then(response => {
