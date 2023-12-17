@@ -1,0 +1,28 @@
+#map {
+    width: 90vw;
+    height: 96vh;
+    transform: translate(1%, 1%);
+}
+
+#dialog {
+    position: absolute;
+    width: 30vw;
+    height: 99vh;
+    top: 0%;
+    left: 100%;
+    transform: translate(-100%, 0%);
+    background-color: white;
+    padding: 12px;
+}
+
+#dialog p {
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+#dialog h1 {
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
