@@ -322,7 +322,7 @@ async function initMap() {
             const { target } = domEvent;
 
 
-            titleH.textContent = "Buoy " + marker.title;
+            titleH.textContent = "Buoy " + marker.position;
             paragraph.innerHTML = "loading...";
 
             const apiUrl = '/waveapp/buoy.py?loc=' + marker.title;
