@@ -11,7 +11,7 @@
         #downloadbuton {
             background-color: orange;
             color: black;
-            padding: 15px;
+            padding: 22px;
             border-radius: 45px;
             border: none;
             margin: 3px;
