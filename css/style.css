@@ -32,14 +32,6 @@ div {
     margin: 0px;
 }
 
-/* a {
-    color: orange;
-}
-
-a:active {
-    color: red;
-} */
-
 .navitem {
     background-color: rgb(105, 105, 105);
     margin-left: 5px;
@@ -55,6 +47,10 @@ a:active {
 .selected {
     color: black !important;
     background-color: white !important;
+}
+
+#waveapp {
+    background-color: purple;
 }
 
 #messageHtml {

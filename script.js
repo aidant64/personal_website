@@ -221,6 +221,12 @@ function findPosition() {
   }
 }
 
+const waveappMenu = document.getElementById("waveapp");
+waveappMenu.addEventListener("click", function () {
+  window.location.href = "/map";
+});
+
+
 messageDiv.style.display = "none";
 findPosition();
 document.body.style.display = "block";
