@@ -7,6 +7,19 @@
             color: red;
             padding-bottom: 5px;
         }
+
+        #downloadbuton {
+            background-color: orange;
+            color: black;
+            padding: 15px;
+            border-radius: 45px;
+            border: none;
+            margin: 3px;
+        }
+
+        #downloadbuton:hover {
+            background-color: gold;
+        }
     </style>
 </head>
 
@@ -21,6 +34,10 @@
     <?php
     echo "<p>", $_SESSION['lines'][29], "</p>";
     ?>
+
+    <button id="downloadbuton" onclick="window.location.href = '/download/marketsim.jar'">Download</button>
+    <p>Run downloaded jar file from the terminal with <u>$java -jar .../marketsim.jar</u> or by double clicking icon</p>
+
     <div>
 
         <div style="background-color: #16226b; padding: 30px;">
