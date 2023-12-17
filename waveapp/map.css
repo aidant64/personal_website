@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+}
+
 #map {
     width: 90vw;
     height: 96vh;
@@ -11,8 +15,9 @@
     top: 0%;
     left: 100%;
     transform: translate(-100%, 0%);
-    background-color: white;
+    background-color: black;
     padding: 12px;
+    color: white;
 }
 
 #dialog p {
