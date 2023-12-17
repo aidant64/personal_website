@@ -32,3 +32,4 @@ Chrome OS
 ** note: For language support type ...com/{language code} into the url (ex: es, kk, ja) **
 ** note: Your default language from your browser's accept-language HTTP header should be automatically used **
 Major
+translation
