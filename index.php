@@ -176,7 +176,8 @@
   $lanHeader = explode(',', trim($acceptLanguageHeader, ','))[0];
 
   echo "<div class='dropdown'>";
-  echo "<button class='material-symbols-outlined dropbtn'>globe_asia</button>";
+  // echo "<button class='material-symbols-outlined dropbtn'>globe_asia</button>";
+  echo "<button class='dropbtn'>🌎</button>";
   echo "<div class='dropdown-content'>";
 
   if ($languageURL === $lanHeader) {
