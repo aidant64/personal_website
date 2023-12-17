@@ -209,7 +209,7 @@
     <?php echo "<p class='navitem' id='Projects'>$lines[3]</p>" ?>
     <?php echo "<p class='navitem' id='Research'>$lines[4]</p>" ?>
     <?php echo "<p class='navitem' id='About'>$lines[5]</p>" ?>
-    <p class='navitem' id='waveapp'>WAVEAPP 🛟</p>
+    <p class='navitem' id='waveapp'>WAVEAPP</p>
   </div>
 
   <div id="content"></div>
