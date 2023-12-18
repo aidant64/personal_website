@@ -1,0 +1,5 @@
+.links-container a {
+    display: block;
+    margin-bottom: 5px;
+    /* Optional: Adds space between links */
+}

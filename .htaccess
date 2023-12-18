@@ -1,23 +1,8 @@
-RewriteEngine On
-
-#RewriteRule home /index.php [R=301]
-
-#RewriteCond %{REQUEST_FILENAME} !-f
-#RewriteCond %{REQUEST_URI} !^/([a-z]{2})$
-#RewriteCond %{REQUEST_URI} !^/([a-z]{2})/$
-#RewriteCond %{HTTP:Accept-Language} ^([a-z]{2}).*$
-#RewriteRule ^ /%1 [L,R]
-
-#RewriteCond %{REQUEST_URI} !^/([a-z]{2})$
-#RewriteCond %{REQUEST_FILENAME} !-f
-#RewriteCond %{REQUEST_URI} !^/([a-z]{2})/$
-#RewriteCond %{HTTP:Accept-Language} !^([a-z]{2}).*$
-#RewriteRule ^ /en [L,R]
-
-
+RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ router.php [L]
-#RewriteRule ^ /index.php [L]
+#RewriteCond %{REQUEST_FILENAME} !-d
+
 
 <Files "/poll/data">
     Header set Cache-Control "no-cache"

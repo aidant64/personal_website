@@ -1,13 +1,32 @@
+#! /bin/php
 <?php
-#;
-#header('Cache-Control: no-cache');
-#header('location: https://www.ford.com/');
+echo "Content-Type: text/html\n\n";
 
-
-#check valid page (null -> education)
 $url = $_SERVER['REQUEST_URI'];
 $urlParts = explode('/', trim($url, '/'));
 $length = count($urlParts);
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Hello, World!</title>
+</head>
+
+<body>
+	<h1>Hello, World!</h1>
+	<p>This is a basic HTML file displaying "Hello, World!".</p>
+</body>
+
+</html>
+
+
+<?php
+
+echo "dog";
 
 $languageCodes = array(
 	'af',
@@ -148,19 +167,10 @@ $languageCodes = array(
 	'en-UK'
 );
 
-if ($urlParts[0] == null) {
-	$acceptLanguageHeader = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
-	$lanCode = explode(',', trim($acceptLanguageHeader, ','))[0];
-	if ($lanCode == null) {
-		http_response_code(301);
-		header('location: https://www.aidanswebsite.com/es');
-		exit;
-	} else {
-		http_response_code(301);
-		header("location: https://www.aidanswebsite.com/$lanCode");
-		exit;
-	}
-}
+echo "cat";
+
+
+echo "dog";
 
 $command = escapeshellcmd("python3 /var/www/html/personal/translate.py $urlParts[0]");
 $output = shell_exec($command);
