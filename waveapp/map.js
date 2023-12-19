@@ -299,7 +299,24 @@ async function initMap() {
         {
             position: { lat: 17.042, lng: -157.746 },
             title: "51002",
+        },
+        {
+            position: { lat: 8.732, lng: 167.734 },
+            title: "KWJP8",
+        },
+        {
+            position: { lat: 7.079, lng: 171.384 },
+            title: "52201",
+        },
+        {
+            position: { lat: 7.081, lng: 158.244 },
+            title: "52213",
+        },
+        {
+            position: { lat: 7.081, lng: 158.244 },
+            title: "52213",
         }
+
 
 
     ];
