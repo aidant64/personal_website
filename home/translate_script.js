@@ -25,8 +25,11 @@ function checkForIncludedLanguage() {
     }
 
     const firstParamValue = urlParams.get(firstParamKey);
-    const selectElement = document.getElementById('languageSelector');
+    if(firstParamValue == "en"){
+	return;
+    }
 
+    const selectElement = document.getElementById('languageSelector');
     for (let i = 0; i < selectElement.options.length; i++) {
         if (selectElement.options[i].value === firstParamValue) {
             selectElement.selectedIndex = i;
