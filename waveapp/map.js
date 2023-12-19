@@ -311,14 +311,7 @@ async function initMap() {
         {
             position: { lat: 7.081, lng: 158.244 },
             title: "52213",
-        },
-        {
-            position: { lat: 7.081, lng: 158.244 },
-            title: "52213",
         }
-
-
-
     ];
 
     // {
