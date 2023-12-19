@@ -1,244 +1,217 @@
+#! /bin/php
+<?php echo "Content-Type: text/html\n";
+
+$languages = array(
+    "en/english",
+    "es/spanish",
+    "ja/japanese",
+    "af/afrikaans",
+    "sq/albanian",
+    "am/amharic",
+    "ar/arabic",
+    "hy/armenian",
+    "az/azerbaijani",
+    "eu/basque",
+    "be/belarusian",
+    "bn/bengali",
+    "bs/bosnian",
+    "bg/bulgarian",
+    "ca/catalan",
+    "ceb/cebuano",
+    "ny/chichewa",
+    "co/corsican",
+    "hr/croatian",
+    "cs/czech",
+    "da/danish",
+    "nl/dutch",
+    "en-US/english-us",
+    "en-UK/english-uk",
+    "eo/esperanto",
+    "et/estonian",
+    "tl/filipino",
+    "fi/finnish",
+    "fr/french",
+    "fy/frisian",
+    "gl/galician",
+    "ka/georgian",
+    "de/german",
+    "el/greek",
+    "gu/gujarati",
+    "ht/haitian creole",
+    "ha/hausa",
+    "haw/hawaiian",
+    "iw/hebrew",
+    "hi/hindi",
+    "hmn/hmong",
+    "hu/hungarian",
+    "is/icelandic",
+    "ig/igbo",
+    "id/indonesian",
+    "ga/irish",
+    "it/italian",
+    "ja/japanese",
+    "jw/javanese",
+    "kn/kannada",
+    "kk/kazakh",
+    "km/khmer",
+    "ko/korean",
+    "ku/kurdish (kurmanji)",
+    "ky/kyrgyz",
+    "lo/lao",
+    "la/latin",
+    "lv/latvian",
+    "lt/lithuanian",
+    "lb/luxembourgish",
+    "mk/macedonian",
+    "mg/malagasy",
+    "ms/malay",
+    "ml/malayalam",
+    "mt/maltese",
+    "mi/maori",
+    "mr/marathi",
+    "mn/mongolian",
+    "my/myanmar (burmese)",
+    "ne/nepali",
+    "no/norwegian",
+    "or/odia",
+    "ps/pashto",
+    "fa/persian",
+    "pl/polish",
+    "pt/portuguese",
+    "pa/punjabi",
+    "ro/romanian",
+    "ru/russian",
+    "sm/samoan",
+    "gd/scots gaelic",
+    "sr/serbian",
+    "st/sesotho",
+    "sn/shona",
+    "sd/sindhi",
+    "si/sinhala",
+    "sk/slovak",
+    "sl/slovenian",
+    "so/somali",
+    "es/spanish",
+    "su/sundanese",
+    "sw/swahili",
+    "sv/swedish",
+    "tg/tajik",
+    "ta/tamil",
+    "te/telugu",
+    "th/thai",
+    "tr/turkish",
+    "uk/ukrainian",
+    "ur/urdu",
+    "ug/uyghur",
+    "uz/uzbek",
+    "vi/vietnamese",
+    "cy/welsh",
+    "xh/xhosa",
+    "yi/yiddish",
+    "yo/yoruba",
+    "zu/zulu"
+);
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Q2DEPB7G6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-3Q2DEPB7G6');
-  </script>
-
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/jpg" href="/images/favicon.jpg" />
-  <link rel='stylesheet' type='text/css' href='/css/style.css' />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-
-  <?php
-
-  function isMobileDevice()
-  {
-    $userAgent = $_SERVER['HTTP_USER_AGENT'];
-    $mobileDevices = array('Android', 'webOS', 'iPhone', 'iPad', 'iPod', 'BlackBerry', 'IEMobile', 'Opera Mini');
-
-    foreach ($mobileDevices as $device) {
-      if (stripos($userAgent, $device) !== false) {
-        return true;
-      }
-    }
-
-    return false;
-  }
-
-  if (isMobileDevice()) {
-    echo "<link rel='stylesheet' type='text/css' href='/css/mobile.css'/>";
-  } else {
-    echo "<link rel='stylesheet' type='text/css' href='/css/desktop.css'/>";
-  }
-
-  session_start();
-
-  echo "<title>", $lines[0], "</title>";
-
-  if (isMobileDevice()) {
-    echo "<link rel='stylesheet' type='text/css' href='/css/dropdown_mobile.css'/>";
-  } else {
-    echo "<link rel='stylesheet' type='text/css' href='/css/dropdown.css'/>";
-  }
-  ?>
-
-
-
+    <title class="translatable">Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Mono">
 </head>
 
+<body>
+    <div class="container">
 
-<body style="display: none;">
-  <?php
-  $lans = array(
-    "en -> english",
-    "es -> spanish",
-    "af ->afrikaans",
-    "sq ->albanian",
-    "am ->amharic",
-    "ar ->arabic",
-    "hy ->armenian",
-    "az ->azerbaijani",
-    "eu ->basque",
-    "be ->belarusian",
-    "bn ->bengali",
-    "bs ->bosnian",
-    "bg ->bulgarian",
-    "ca ->catalan",
-    "ceb ->cebuano",
-    "ny ->chichewa",
-    "co ->corsican",
-    "hr ->croatian",
-    "cs ->czech",
-    "da ->danish",
-    "nl ->dutch",
-    "en-US ->english-us",
-    "en-UK ->english-uk",
-    "eo ->esperanto",
-    "et ->estonian",
-    "tl ->filipino",
-    "fi ->finnish",
-    "fr ->french",
-    "fy ->frisian",
-    "gl ->galician",
-    "ka ->georgian",
-    "de ->german",
-    "el ->greek",
-    "gu ->gujarati",
-    "ht ->haitian creole",
-    "ha ->hausa",
-    "haw ->hawaiian",
-    "iw ->hebrew",
-    "he ->hebrew",
-    "hi ->hindi",
-    "hmn ->hmong",
-    "hu ->hungarian",
-    "is ->icelandic",
-    "ig ->igbo",
-    "id ->indonesian",
-    "ga ->irish",
-    "it ->italian",
-    "ja ->japanese",
-    "jw ->javanese",
-    "kn ->kannada",
-    "kk ->kazakh",
-    "km ->khmer",
-    "ko ->korean",
-    "ku ->kurdish (kurmanji)",
-    "ky ->kyrgyz",
-    "lo ->lao",
-    "la ->latin",
-    "lv ->latvian",
-    "lt ->lithuanian",
-    "lb ->luxembourgish",
-    "mk ->macedonian",
-    "mg ->malagasy",
-    "ms ->malay",
-    "ml ->malayalam",
-    "mt ->maltese",
-    "mi ->maori",
-    "mr ->marathi",
-    "mn ->mongolian",
-    "my ->myanmar (burmese)",
-    "ne ->nepali",
-    "no ->norwegian",
-    "or ->odia",
-    "ps ->pashto",
-    "fa ->persian",
-    "pl ->polish",
-    "pt ->portuguese",
-    "pa ->punjabi",
-    "ro ->romanian",
-    "ru ->russian",
-    "sm ->samoan",
-    "gd ->scots gaelic",
-    "sr ->serbian",
-    "st ->sesotho",
-    "sn ->shona",
-    "sd ->sindhi",
-    "si ->sinhala",
-    "sk ->slovak",
-    "sl ->slovenian",
-    "so ->somali",
-    "es ->spanish",
-    "su ->sundanese",
-    "sw ->swahili",
-    "sv ->swedish",
-    "tg ->tajik",
-    "ta ->tamil",
-    "te ->telugu",
-    "th ->thai",
-    "tr ->turkish",
-    "uk ->ukrainian",
-    "ur ->urdu",
-    "ug ->uyghur",
-    "uz ->uzbek",
-    "vi ->vietnamese",
-    "cy ->welsh",
-    "xh ->xhosa",
-    "yi ->yiddish",
-    "yo ->yoruba",
-    "zu ->zulu"
-  );
+        <div class="inline">
+            <div>
+                <h1 class="translatable">Portfolio</h1>
+                <p class="translatable">Computer science student in San Diego, California</p>
+            </div>
+            <select id='languageSelector' class='sss' onchange="translateAll(this.value)">
+                <?php
+                foreach ($languages as $item) {
+                    $code = explode("/", $item)[0];
+                    $name = explode("/", $item)[1];
+                    echo "<option value='$code'>$name</option>";
+                }
+                ?>
+            </select>
+        </div>
 
-  $url = $_SERVER['REQUEST_URI'];
-  $languageURL = explode('/', trim($url, '/'))[0];
-  $acceptLanguageHeader = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
-  $lanHeader = explode(',', trim($acceptLanguageHeader, ','))[0];
+        <div class="tab_container">
+            <a href='/map' class="tab translatable">WAVEAPP</a>
+            <a href='/timemachine' class="tab translatable">time machine</a>
+            <a href='/weather' class="tab translatable">local weather</a>
+        </div>
 
-  echo "<div class='dropdown'>";
-  // echo "<button class='material-symbols-outlined dropbtn'>globe_asia</button>";
-  echo "<button class='dropbtn'>$lines[34]</button>";
-  echo "<div class='dropdown-content'>";
+        <div class="mtabel">
+            <br>
+            <p class="translatable">Education</p>
+            <table>
+                <tr>
+                    <td class="translatable">San Diego State University</td>
+                    <td class="translatable">August 2019 -> May 2024 (expected)</td>
+                    <td class="translatable">GPA: 3.77</td>
+                </tr>
+                <tr>
+                    <td class="translatable">Bachelor of Science, Computer Science</td>
+                    <td></td>
+                    <td class="translatable">Major GPA: 3.88</td>
+                </tr>
+            </table>
+            <br>
+            <a href='https://rtec.sdsu.edu'> <img src='https://rtec.sdsu.edu/images/rtec_logo.png' width=50px,
+                    height=50px>
+                <p class="translatable">Research</p>
+            </a>
 
-  if ($languageURL === $lanHeader) {
-    echo "<a href='/' style='background-color: grey;'>preferred</a>";
-  } else {
-    echo "<a href='/'>preferred</a>";
-  }
 
-  foreach ($lans as $element) {
-    $code = explode(" ->", $element)[0];
-    $name = explode(" ->", $element)[1];
-    if ($code == $languageURL) {
-      echo "<a href='/$code' style='background-color: grey;'>$name</a>";
-    } else {
-      echo "<a href='/$code'>$name</a>";
-    }
-  }
-  echo "</div>";
-  echo "</div>";
-  ?>
+            <table>
+                <tr>
+                    <td class="translatable">San Diego State University R.T.E.C. Lab</td>
+                    <td><a class="translatable" href='https://rtec.sdsu.edu'>RTEC Lab Website</a></td>
+                    <td class="translatable">September 2022/ Current</td>
+                </tr>
+                <tr>
+                    <td class="translatable">Research into the new design of Priority-Driven Chain-Aware Scheduling for
+                        autonomous vehicles</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <br>
+            <a href='https://www.sdsucyberdefense.org/'><img
+                    src='https://www.sdsucyberdefense.org/images/cdt_logo-p-500.png' width=60px, height=45px>
+                <p class="translatable">Campus Clubs</p>
+            </a>
 
-  <div>
-    <h1>Aidan Thomas</h1>
-    <?php echo "<p id='mh4'>$lines[1]</p>" ?>
-  </div>
-
-  <div class="topnav">
-    <?php echo "<p class='navitem' id='Education'>$lines[2]</p>" ?>
-    <?php echo "<p class='navitem' id='Projects'>$lines[3]</p>" ?>
-    <?php echo "<p class='navitem' id='Research'>$lines[4]</p>" ?>
-    <?php echo "<p class='navitem' id='About'>$lines[5]</p>" ?>
-    <p class='navitem' id='waveapp'>WAVEAPP</p>
-  </div>
-
-  <div id="content"></div>
-
-  <div id="poll">
-
-    <link rel="stylesheet" type="text/css" href="/poll/style.css" />
-    <?php echo "<h2>$lines[23]</h2>" ?>
-    <a href="mailto:aidanthomas128@gmail.com">aidanthomas128@gmail.com</a>
-
-    <?php echo "<h4>$lines[24]</h4>" ?>
-
-    <div id="question">
-      <?php
-      echo "<button id='op1'>$lines[25]</button>";
-      echo "<button id='op2'>$lines[26]</button>";
-      echo "<button id='op3'>$lines[27]</button>";
-      echo "<button id='op4'>$lines[28]</button>";
-      ?>
+            <table>
+                <tr>
+                    <td class="translatable">San Diego State Cyber Defense Team</td>
+                    <td><a href='https://www.sdsucyberdefense.org/' class="translatable">Cyber Defense Club Website</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="translatable">Placed 24th out of more than 4000 teams in the 2023 National Cyber League
+                        Team Competition</td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td class="translatable">Placed 10th out of 24 teams in the 2023 CCDC Invitational Competition</td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </table>
+        </div>
     </div>
 
-
-  </div>
-
-  <script src="/script.js"></script>
-
-  <footer></footer>
-
-
+    <script src='/translate_script.js' defer></script>
 
 </body>
 

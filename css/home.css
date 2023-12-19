@@ -1,0 +1,71 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px solid white;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'DM Mono';
+    font-size: 16px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin: 17px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+/* classes */
+.tab_container {
+    margin: 30px;
+    margin-top: 50px;
+}
+
+.tab {
+    background-color: white;
+    color: black;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tab:hover {
+    background-color: wheat;
+    color: red;
+    cursor: pointer;
+}
+
+.inline {
+    display: inline-flex
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+}
+
+.loading {
+    opacity: 10%;
+    background-color: white;
+    border-radius: 100px;
+    color: white;
+}
+
+.sss {
+    background: linear-gradient(to bottom right, orange, purple);
+    text-align: center;
+}
+
+/* id's */

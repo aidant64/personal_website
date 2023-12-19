@@ -1,9 +1,4 @@
-#! /usr/bin/python3
-# sys.path.append('/home/ubuntu/.local/lib/python3.10/site-packages')
-import sys
 from deep_translator import GoogleTranslator
-
-first_argument = sys.argv[1]
 
 LANGUAGES = {
     "en-US": "english-us",
@@ -117,18 +112,18 @@ LANGUAGES = {
     "zu": "zulu",
 }
 
-filepath = '/var/www/html/personal/lines.txt'
 
-if first_argument not in LANGUAGES:
-    print("bad", end="")
-    sys.exit(1)
+def translatem(lines, language):
+    if language not in LANGUAGES:
+        return
+    if(language == 'en-US' or language == 'en-UK'):
+        language = 'en'
 
-if(first_argument == 'en-US' or first_argument == 'en-UK'):
-    first_argument = 'en'
+    lines_as_string = ""
+    for i in range(len(lines)):
+        lines_as_string = lines_as_string + "\n" + lines[i]
 
-trans_lines = GoogleTranslator(source="en", target=first_argument).translate_file("/var/www/html/personal/lines.txt")
-translated_lines = trans_lines.split('\n')
+    translated_lines = GoogleTranslator(source="en", target=str(language)).translate(lines_as_string)
+    translated_lines = translated_lines.split('\n')
 
-for line in translated_lines:
-    print(line, end="")
-    print("^^", end="")
+    return translated_lines
