@@ -71,7 +71,7 @@ function translateAll(languageCode) {
 
 
 function postRequest(dataJSON) {
-    fetch('/api.py', {
+    fetch('/home/translate/api.py', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

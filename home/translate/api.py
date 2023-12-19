@@ -22,10 +22,6 @@ languageCode = json_object['languageCode']
 #TRANSLATE
 translated_lines = translate.translatem(text_content_list, languageCode)
 
-with open("./debug.txt", 'w') as file:
-    for i in range(len(translated_lines)):
-        file.write(translated_lines[i] + "\n")
-
 json_string = json.dumps(translated_lines)
 byte_length = len(json_string.encode('utf-8'))
 print('Content-Length: ' + str(byte_length) + '\n')
