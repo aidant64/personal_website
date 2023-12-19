@@ -1,2 +1,4 @@
 RewriteEngine on
 RewriteRule ^$ /home/index.php [L]
+RewriteRule ^weather$ /localweather/weather.html [L]
+RewriteRule ^map$ /waveapp/map.html [L]

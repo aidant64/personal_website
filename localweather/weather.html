@@ -8,7 +8,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-image: url('./images/map.png');
+            background-image: url('/images/map.png');
             background-size: 100vw 110vh;
             background-position: top;
             background-repeat: no-repeat;
@@ -95,7 +95,7 @@
             });
 
             function buttonClick(event) {
-                const url = "./api/weather.bash?loc=" + event.target.id;
+                const url = "/localweather/api/weather.bash?loc=" + event.target.id;
                 tit.innerHTML = "loading...";
                 wind.innerHTML = "<br><br><br><br><br>";
                 wave.innerHTML = "";
