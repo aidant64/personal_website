@@ -33,25 +33,6 @@ select:hover {
 }
 
 /* classes */
-.tab_container {
-    margin: 30px;
-    margin-top: 50px;
-}
-
-.tab {
-    background-color: white;
-    color: black;
-    margin: 30px;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.tab:hover {
-    background-color: wheat;
-    color: red;
-    cursor: pointer;
-}
-
 .inline {
     display: inline-flex;
 }
@@ -74,9 +55,18 @@ select:hover {
     color: white;
 }
 
+.project:hover {
+    background: linear-gradient(to bottom right, orange, purple);
+    border-radius: 6px;
+}
+
 .sss {
     background: linear-gradient(to bottom right, orange, purple);
     text-align: center;
 }
 
 /* id's */
+#projects {
+    width: 100%;
+    display: block;
+}

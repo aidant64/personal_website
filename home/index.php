@@ -195,19 +195,22 @@ $languages = array(
             </table>
 
             <br>
-            <p class="translatable">Projects</p>
-        </div>
-
-        <div class="tab_container">
-            <a href='/map' class="tab translatable">WAVEAPP</a>
-            <a href='/timemachine' class="tab translatable">time machine</a>
-            <a href='/weather' class="tab translatable">local weather</a>
-        </div>
-
-        <div class="tab_container">
+            <p class="translatable">Projects:</p>
             <br>
-            <a href='/marketsim' class="tab translatable">stock market simulator</a>
         </div>
+
+
+        <div>
+            <br><a href='/map' class="translatable project">WAVEAPP: live buoy readings for wind and waves from NOAA
+                integrated with interactive Google Maps API</a><br><br>
+            <a href='/timemachine' class="translatable project">Time machine: see previous versions of my website (git
+                history)</a><br><br>
+            <a href='/weather' class="translatable project">local weather: simple weather application for helping my
+                neighbor</a><br><br>
+            <a href='/marketsim' class="translatable project">stock market simulator: Given 1,000 virtual dollars users
+                can buy and sell U.S. traded stocks at realtime prices</a><br><br>
+        </div>
+
     </div>
 
     <script src='/home/translate_script.js' defer></script>
