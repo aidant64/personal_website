@@ -10,7 +10,7 @@
 
 <body>
     <h1>Git Commit History Links -> live preview of website</h1>
-    <ul>
+    <ol>
         <li><a href="/timemachine/goback.bash?hash=b2a7501">pretty kind of</a></li>
         <li><a href="/timemachine/goback.bash?hash=1842d8e">added colors</a></li>
         <li><a href="/timemachine/goback.bash?hash=15e1903">simplified directories and htacess rules</a></li>
@@ -108,7 +108,13 @@
         <li><a href="/timemachine/goback.bash?hash=ee21a76">Update README.md</a></li>
         <li><a href="/timemachine/goback.bash?hash=1500306">second server version</a></li>
         <li><a href="/timemachine/goback.bash?hash=69214a9">server version</a></li>
-    </ul>
+        <li><a href="/timemachine/goback.bash?hash=3c39315">moved link to header</a></li>
+        <li><a href="/timemachine/goback.bash?hash=12cf78a">end of days work</a></li>
+        <li><a href="/timemachine/goback.bash?hash=9c2992e">added about page {incomplete}</a></li>
+        <li><a href="/timemachine/goback.bash?hash=2a188f1">initial code commit</a></li>
+        <li><a href="/timemachine/goback.bash?hash=09de067">first commit</a></li>
+    </ol>
+    <br><br><br>
 </body>
 
 </html>
