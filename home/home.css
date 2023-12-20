@@ -1,11 +1,10 @@
 * {
     margin: 0px;
     padding: 0px;
-    border: 0px solid white;
     box-sizing: border-box;
-    background-color: black;
+    background-color: rgb(41, 25, 70);
     color: white;
-    text-decoration: none;
+    border: 0px solid white;
 }
 
 body {
@@ -21,6 +20,12 @@ select {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+table {
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 select:hover {
@@ -48,18 +53,24 @@ select:hover {
 }
 
 .inline {
-    display: inline-flex
+    display: inline-flex;
+}
+
+.mtable p {
+    display: inline-flex;
 }
 
 .container {
-    display: grid;
-    justify-content: center;
+    position: relative;
+    width: 920px;
+    margin: 0px auto;
+    text-align: left;
 }
 
 .loading {
     opacity: 10%;
     background-color: white;
-    border-radius: 100px;
+    border-radius: 6px;
     color: white;
 }
 

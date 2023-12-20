@@ -1,4 +1,7 @@
 RewriteEngine on
+RewriteRule ^favicon.ico$ /images/favicon.jpg [L]
 RewriteRule ^$ /home/index.php [L]
 RewriteRule ^weather$ /localweather/weather.html [L]
 RewriteRule ^map$ /waveapp/map.html [L]
+RewriteRule ^marketsim$ /marketsim/index.html [L]
+

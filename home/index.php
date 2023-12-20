@@ -142,72 +142,71 @@ $languages = array(
             </select>
         </div>
 
-        <div class="tab_container">
-            <a href='/map' class="tab translatable">WAVEAPP</a>
-            <a href='/timemachine' class="tab translatable">time machine</a>
-            <a href='/weather' class="tab translatable">local weather</a>
-        </div>
 
-        <div class="mtabel">
-            <br>
-            <p class="translatable">Education</p>
+
+        <div class="mtable">
+            <br> <br>
+            <p class="translatable">Education:</p>
+
             <table>
                 <tr>
                     <td class="translatable">San Diego State University</td>
-                    <td class="translatable">August 2019 -> May 2024 (expected)</td>
-                    <td class="translatable">GPA: 3.77</td>
                 </tr>
                 <tr>
                     <td class="translatable">Bachelor of Science, Computer Science</td>
-                    <td></td>
+                    <td class="translatable">GPA: 3.77</td>
+                </tr>
+                <tr>
+                    <td class="translatable">Graduation: May 2024</td>
                     <td class="translatable">Major GPA: 3.88</td>
                 </tr>
             </table>
             <br>
-            <a href='https://rtec.sdsu.edu'> <img src='https://rtec.sdsu.edu/images/rtec_logo.png' width=50px,
-                    height=50px>
-                <p class="translatable">Research</p>
-            </a>
 
+            <p class="translatable">Research:</p>
 
             <table>
                 <tr>
                     <td class="translatable">San Diego State University R.T.E.C. Lab</td>
                     <td><a class="translatable" href='https://rtec.sdsu.edu'>RTEC Lab Website</a></td>
-                    <td class="translatable">September 2022/ Current</td>
                 </tr>
                 <tr>
-                    <td class="translatable">Research into the new design of Priority-Driven Chain-Aware Scheduling for
+                    <td class="translatable">Design of Priority-Driven Chain-Aware Scheduling for
                         autonomous vehicles</td>
-                    <td></td>
-                    <td></td>
+                    <td class="translatable">September 2022 -> Current</td>
                 </tr>
             </table>
             <br>
-            <a href='https://www.sdsucyberdefense.org/'><img
-                    src='https://www.sdsucyberdefense.org/images/cdt_logo-p-500.png' width=60px, height=45px>
-                <p class="translatable">Campus Clubs</p>
-            </a>
+            <!-- <a href='https://www.sdsucyberdefense.org/'><img
+                    src='https://www.sdsucyberdefense.org/images/cdt_logo-p-500.png' width=60px, height=45px> -->
+            <p class="translatable">Cyber Defense Team:</p>
 
             <table>
                 <tr>
                     <td class="translatable">San Diego State Cyber Defense Team</td>
                     <td><a href='https://www.sdsucyberdefense.org/' class="translatable">Cyber Defense Club Website</a>
                     </td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td class="translatable">Placed 24th out of more than 4000 teams in the 2023 National Cyber League
                         Team Competition</td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr>
                     <td class="translatable">Placed 10th out of 24 teams in the 2023 CCDC Invitational Competition</td>
-                    <td> </td>
-                    <td> </td>
                 </tr>
             </table>
+
+            <br>
+            <p class="translatable">Projects</p>
+        </div>
+
+        <div class="tab_container">
+            <a href='/map' class="tab translatable">WAVEAPP</a>
+            <a href='/timemachine' class="tab translatable">time machine</a>
+            <a href='/weather' class="tab translatable">local weather</a>
+        </div>
+
+        <div class="tab_container">
+            <br>
+            <a href='/marketsim' class="tab translatable">stock market simulator</a>
         </div>
     </div>
 
