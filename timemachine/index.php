@@ -9,9 +9,8 @@
 </head>
 
 <body>
-    <h1>Commit History Links</h1>
+    <h1>Git Commit History Links -> live preview of website</h1>
     <ul>
-        <li><a href="/timemachine/goback.bash?hash=a433ff9">working on timemachine</a></li>
         <li><a href="/timemachine/goback.bash?hash=b2a7501">pretty kind of</a></li>
         <li><a href="/timemachine/goback.bash?hash=1842d8e">added colors</a></li>
         <li><a href="/timemachine/goback.bash?hash=15e1903">simplified directories and htacess rules</a></li>
