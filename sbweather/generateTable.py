@@ -58,7 +58,7 @@ for i in range(2, mRange):
     if(line[8] != 'MM' and waveHeight == -1):
         waveHeight = line[8]
     if(line[10] != 'MM' and waveAvePeriod == -1):
-        waveAvePeriod = line[10]
+        waveAvePeriod = line[9]#10 FOR AVERAGE
     if(line[11] != 'MM' and waveDir == -1):
         waveDir = line[11]    
 

@@ -19,7 +19,7 @@ function isMobileDevice()
 
 <head>
     <meta charset="UTF-8">
-    <title>Hello, World!</title>
+    <title>SB</title>
     <?php
     if (isMobileDevice()) {
         echo "<link rel='stylesheet' type='text/css' href='/sbweather/mobile_style.css'>";
