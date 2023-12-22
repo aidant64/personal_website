@@ -1,0 +1,48 @@
+* {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100vw;
+}
+
+/* classes */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 3px;
+    padding: 10px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    /* center items vertically */
+    /* justify-content: center; */
+    /* center text */
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+td {
+    padding: 15px;
+}
