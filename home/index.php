@@ -207,7 +207,8 @@ $languages = array(
                 history)</a><br><br>
             <a href='/weather' class="translatable project">local weather: simple weather application for helping my
                 neighbors</a><br><br>
-            <a href='/sb' class="translatable project">local weather: quickly see the local weather & surf forcast</a>
+            <a href='/sb' class="translatable project">local weather: quickly see the local weather & surf
+                forcast</a><br><br>
             <a href='/marketsim' class="translatable project">stock market simulator: Given 1,000 virtual dollars users
                 can buy and sell U.S. traded stocks at realtime prices</a><br><br>
         </div>
