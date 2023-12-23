@@ -206,7 +206,8 @@ $languages = array(
             <a href='/timemachine' class="translatable project">Time machine: see previous versions of my website (git
                 history)</a><br><br>
             <a href='/weather' class="translatable project">local weather: simple weather application for helping my
-                neighbor</a><br><br>
+                neighbors</a><br><br>
+            <a href='/sb' class="translatable project">local weather: quickly see the local weather & surf forcast</a>
             <a href='/marketsim' class="translatable project">stock market simulator: Given 1,000 virtual dollars users
                 can buy and sell U.S. traded stocks at realtime prices</a><br><br>
         </div>
