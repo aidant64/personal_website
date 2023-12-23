@@ -11,7 +11,7 @@ async function initMap() {
 
     map = new Map(document.getElementById("map"), {
         center: position,
-        zoom: 8,
+        zoom: 4,
         mapTypeControl: false,
         streetViewControl: false,
         zoomControl: false,
@@ -181,10 +181,6 @@ async function initMap() {
             title: "46059",
         },
         {
-            position: { lat: 39.335, lng: -127.070 },
-            title: "46411",
-        },
-        {
             position: { lat: 35.170, lng: -120.741 },
             title: "CPXC1",
         },
@@ -271,10 +267,6 @@ async function initMap() {
         {
             position: { lat: 46.143, lng: -131.09 },
             title: "46005",
-        },
-        {
-            position: { lat: 48.360, lng: -133.94 },
-            title: "46036",
         },
         {
             position: { lat: 50.055, lng: -144.873 },
