@@ -15,3 +15,5 @@
       
  - Python Deep_Translate package used for translation based on 2-char language code
  - Simple python used to update and write poll responses to disk
+
+ - NOW with Ruby!
