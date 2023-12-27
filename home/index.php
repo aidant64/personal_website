@@ -201,7 +201,7 @@ $languages = array(
 
 
         <div>
-            <br><a href='/map' class="translatable project">WAVEAPP: live buoy readings for wind and waves from NOAA
+            <br><a href='https://ruby.aidanswebsite.com/' class="translatable project">WAVEAPP: live buoy readings for wind and waves from NOAA
                 integrated with interactive Google Maps API</a><br><br>
             <a href='/timemachine' class="translatable project">Time machine: see previous versions of my website (git
                 history)</a><br><br>
