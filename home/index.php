@@ -213,6 +213,13 @@ $languages = array(
                 can buy and sell U.S. traded stocks at realtime prices</a><br><br>
         </div>
 
+
+        <div id='drawing_container'>
+            <canvas id='drawing'>
+            </canvas>
+        </div>
+
+
     </div>
 
     <script src='/home/translate_script.js' defer></script>
