@@ -120,13 +120,16 @@ $languages = array(
 <head>
     <title class="translatable">Portfolio</title>
     <link rel="stylesheet" type="text/css" href="/home/home.css">
+    <link rel="stylesheet" type="text/css" href="/home/tabs.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Flow+Block&display=swap">
+
 </head>
 
 <body>
     <div class="container">
 
-        <div class="inline">
+        <div class="header">
             <div>
                 <h1 class="translatable">Portfolio</h1>
                 <p class="translatable">Computer science student in San Diego, California</p>
@@ -142,87 +145,92 @@ $languages = array(
             </select>
         </div>
 
+        <div class="tab-div">
+            <p id="education" class="translatable tab selected">Education</p>
+            <p id="research" class="translatable tab">Research</p>
+            <p id="team" class="translatable tab">Team</p>
+            <p id="project" class="translatable tab">Project</p>
+            <p id="apps" class="translatable tab">Apps</p>
+        </div>
+        <br><br>
 
+        <div id='education-content' class='content selectedContent'>
+            <h3 class="translatable">San Diego State University</h3>
+            <p class="translatable">Bachelor of Science, Computer Science</p>
+            <p class="translatable">Graduation: May 2024</p>
+            <p class="translatable">GPA: 3.77</p>
+            <p class="translatable">Major GPA: 3.88</p>
+        </div>
 
-        <div class="mtable">
-            <br> <br>
-            <p class="translatable">Education:</p>
-
-            <table>
-                <tr>
-                    <td class="translatable">San Diego State University</td>
-                </tr>
-                <tr>
-                    <td class="translatable">Bachelor of Science, Computer Science</td>
-                    <td class="translatable">GPA: 3.77</td>
-                </tr>
-                <tr>
-                    <td class="translatable">Graduation: May 2024</td>
-                    <td class="translatable">Major GPA: 3.88</td>
-                </tr>
-            </table>
-            <br>
-
-            <p class="translatable">Research:</p>
-
-            <table>
-                <tr>
-                    <td class="translatable">San Diego State University R.T.E.C. Lab</td>
-                    <td><a class="translatable" href='https://rtec.sdsu.edu'>RTEC Lab Website</a></td>
-                </tr>
-                <tr>
-                    <td class="translatable">Design of Priority-Driven Chain-Aware Scheduling for
-                        autonomous vehicles</td>
-                    <td class="translatable">September 2022 -> Current</td>
-                </tr>
-            </table>
-            <br>
-            <!-- <a href='https://www.sdsucyberdefense.org/'><img
-                    src='https://www.sdsucyberdefense.org/images/cdt_logo-p-500.png' width=60px, height=45px> -->
-            <p class="translatable">Cyber Defense Team:</p>
-
-            <table>
-                <tr>
-                    <td class="translatable">San Diego State Cyber Defense Team</td>
-                    <td><a href='https://www.sdsucyberdefense.org/' class="translatable">Cyber Defense Club Website</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="translatable">Placed 24th out of more than 4000 teams in the 2023 National Cyber League
-                        Team Competition</td>
-                    <td class="translatable">Placed 10th out of 24 teams in the 2023 CCDC Invitational Competition</td>
-                </tr>
-            </table>
-
-            <br>
-            <p class="translatable">Projects:</p>
-            <br>
+        <div id='research-content' class='content'>
+            <h3 class="translatable">San Diego State University R.T.E.C. Lab</h3>
+            <p> <a class="translatable" href='https://rtec.sdsu.edu'>RTEC Lab Website</a></p>
+            <p class="translatable">Design of Priority-Driven Chain-Aware Scheduling for autonomous vehicles</p>
+            <p class="translatable">September 2022 -> Current</p>
         </div>
 
 
-        <div>
-            <br><a href='https://ruby.aidanswebsite.com/' class="translatable project">WAVEAPP: live buoy readings for wind and waves from NOAA
+        <div id='team-content' class='content'>
+            <h3 class="translatable">San Diego State Cyber Defense Team</h3>
+            <p> <a href='https://www.sdsucyberdefense.org/' class="translatable">Cyber Defense Club Website</a></p>
+            <p class="translatable">Placed 24th out of more than 4000 teams in the 2023 National Cyber League</p>
+            <p class="translatable">Placed 10th out of 24 teams in the 2023 CCDC Invitational Competition</p>
+        </div>
+
+        <div id='project-content' class='content'>
+            <div>
+                <h3>26,000+ unique downloads (statistics below)</h3>
+
+                <div>
+                    <p>Easily install and Run on any computer with Java (JDK) installed:</p>
+                    <code>git clone https://github.com/aidant64/marketsim.git && cd marketsim/ && javac -d . Main/Main.java && java Main.Main</code>
+                </div>
+
+                <p>
+                    Developed a desktop application in Java that queries live public stock prices and allows users to
+                    build a
+                    portfolio of mock stocks based on real-time, real-life prices</p>
+
+                <img src="/images/basic.png" alt="(Unable to Load Image)" />
+
+
+                <p> Frontend GUI created with NetBeans IDE with Java Swift JFrame </p>
+                <p> Live stock prices queried from FinnHub RESTfull API service </p>
+
+                <img src="/images/reset.png" alt="(Unable to Load Image)" />
+
+
+                <p>The original version I wrote for Android mobile devices had 26,000+ unique downloads on the Google
+                    Play Store</p>
+
+                <img src="/images/installs.png" alt="(Unable to Load Image)" />
+
+                <p>Screenshot of download statistics</p>
+            </div>
+
+        </div>
+
+        <div id='apps-content' class='content'>
+            <br><a href='https://ruby.aidanswebsite.com/' class="translatable project">WAVEAPP: live buoy
+                readings for
+                wind and waves from NOAA
                 integrated with interactive Google Maps API</a><br><br>
-            <a href='/timemachine' class="translatable project">Time machine: see previous versions of my website (git
+            <a href='/timemachine' class="translatable project">Time machine: see previous versions of my
+                website (git
                 history)</a><br><br>
-            <a href='/weather' class="translatable project">local weather: simple weather application for helping my
+            <a href='/weather' class="translatable project">local weather: simple weather application for
+                helping my
                 neighbors</a><br><br>
             <a href='/sb' class="translatable project">local weather: quickly see the local weather & surf
                 forcast</a><br><br>
-            <a href='/marketsim' class="translatable project">stock market simulator: Given 1,000 virtual dollars users
+            <a href='/marketsim' class="translatable project">stock market simulator: Given 1,000 virtual
+                dollars users
                 can buy and sell U.S. traded stocks at realtime prices</a><br><br>
         </div>
 
 
-        <div id='drawing_container'>
-            <canvas id='drawing'>
-            </canvas>
-        </div>
-
-
-    </div>
-
-    <script src='/home/translate_script.js' defer></script>
+        <script src='/home/translate_script.js' defer></script>
+        <script src='/home/tabs.js' defer></script>
 
 </body>
 

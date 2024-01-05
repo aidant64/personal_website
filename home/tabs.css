@@ -1,0 +1,34 @@
+.tab-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tab {
+    background-color: rgb(20, 20, 79);
+    text-align: center;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.tab:hover {
+    cursor: pointer;
+    background-color: blueviolet;
+}
+
+.selected {
+    background-color: blueviolet;
+}
+
+.content {
+    display: none;
+}
+
+.selectedContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}

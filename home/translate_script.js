@@ -25,8 +25,8 @@ function checkForIncludedLanguage() {
     }
 
     const firstParamValue = urlParams.get(firstParamKey);
-    if(firstParamValue == "en"){
-	return;
+    if (firstParamValue == "en") {
+        return;
     }
 
     const selectElement = document.getElementById('languageSelector');
@@ -60,6 +60,8 @@ function translateAll(languageCode) {
     translatableElements.forEach(element => {
         element.classList.add('loading');
     });
+
+
     const newURL = '?lan=' + languageCode;
     history.pushState({}, '', newURL);
 
