@@ -123,7 +123,6 @@ $languages = array(
     <link rel="stylesheet" type="text/css" href="/home/tabs.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Mono">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Flow+Block&display=swap">
-
 </head>
 
 <body>
@@ -181,8 +180,9 @@ $languages = array(
             <div>
                 <h3>26,000+ unique downloads (statistics below)</h3>
 
-                <div>
-                    <p>Easily install and Run on any computer with Java (JDK) installed:</p>
+                <p>Easily install and Run on any computer with Java (JDK) installed:</p>
+
+                <div id='gitcommand'>
                     <code>git clone https://github.com/aidant64/marketsim.git && cd marketsim/ && javac -d . Main/Main.java && java Main.Main</code>
                 </div>
 
@@ -206,26 +206,17 @@ $languages = array(
                 <img src="/images/installs.png" alt="(Unable to Load Image)" />
 
                 <p>Screenshot of download statistics</p>
+                <br><br>
             </div>
 
         </div>
 
         <div id='apps-content' class='content'>
-            <br><a href='https://ruby.aidanswebsite.com/' class="translatable project">WAVEAPP: live buoy
-                readings for
-                wind and waves from NOAA
-                integrated with interactive Google Maps API</a><br><br>
-            <a href='/timemachine' class="translatable project">Time machine: see previous versions of my
-                website (git
-                history)</a><br><br>
-            <a href='/weather' class="translatable project">local weather: simple weather application for
-                helping my
-                neighbors</a><br><br>
-            <a href='/sb' class="translatable project">local weather: quickly see the local weather & surf
-                forcast</a><br><br>
-            <a href='/marketsim' class="translatable project">stock market simulator: Given 1,000 virtual
-                dollars users
-                can buy and sell U.S. traded stocks at realtime prices</a><br><br>
+            <br><a href='https://ruby.aidanswebsite.com/' class="translatable project">BUOY app</a><br><br>
+            <a href='/timemachine' class="translatable project">Time machine (git history)</a><br><br>
+            <a href='/weather' class="translatable project">Local Buoys</a><br><br>
+            <a href='/sb' class="translatable project">Local Weather</a><br><br>
+            <a href='/sb' class="translatable project">Buoy Art</a><br><br>
         </div>
 
 

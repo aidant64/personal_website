@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-color: rgb(41, 25, 70);
     color: white;
     border: 0px solid white;
 }
@@ -10,6 +9,7 @@
 body {
     font-family: 'DM Mono';
     font-size: 16px;
+    background-color: rgb(62, 18, 18);
 }
 
 select {
@@ -41,7 +41,13 @@ p {
     margin-top: 10px;
 }
 
-
+#gitcommand {
+    background-color: rgb(47, 30, 63);
+    color: red;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 15px;
+}
 
 
 /* classes */

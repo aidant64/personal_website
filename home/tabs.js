@@ -17,3 +17,9 @@ tabElements.forEach(function (tab, index) {
         contentElements[index].classList.add('selectedContent');
     });
 });
+
+// function checkForTab() {
+//     history.pushState(null, null, '#home');
+// }
+
+// checkForTab();
