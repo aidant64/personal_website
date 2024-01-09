@@ -10,7 +10,6 @@
 body {
     font-family: 'DM Mono';
     font-size: 16px;
-
 }
 
 select {
@@ -18,6 +17,7 @@ select {
     border: 1px solid white;
     border-radius: 8px;
     margin: 20px;
+    text-align: center;
 }
 
 table {
@@ -41,13 +41,6 @@ p {
     margin-top: 10px;
 }
 
-#gitcommand {
-    background-color: rgb(47, 30, 63);
-    color: red;
-    margin: 5px;
-    padding: 8px;
-    border-radius: 15px;
-}
 
 
 /* classes */
@@ -73,26 +66,25 @@ p {
     color: white;
 }
 
-.project:hover {
-    background: linear-gradient(to bottom right, orange, purple);
-    border-radius: 6px;
-}
-
-.sss {
-    /* background: linear-gradient(to bottom right, orange, purple);
-    text-align: center;
-    align-self: center; */
-}
-
 
 /* id's */
-#projects {
-    width: 100%;
-    display: block;
-}
+
 
 #apps-content a {
     margin-top: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+#gitcommand {
+    background-color: rgb(47, 30, 63);
+    color: red;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+
+code {
+    background-color: rgb(47, 30, 63);
 }

@@ -55,15 +55,26 @@ function applyTranslatedLines(trasnlated_lines_JSON_array) {
     });
 }
 
+function changeURL(languageCode){
+    const currentURL = window.location.href;
+    var urlObj = new URL(currentURL);
+    if(urlObj.searchParams.has('lan')){
+        urlObj.searchParams.set('lan', languageCode);
+    } else {
+        urlObj.searchParams.append('lan', languageCode);
+    }
+    
+    history.replaceState({}, '', urlObj.href);
+}
+
 function translateAll(languageCode) {
     const translatableElements = document.querySelectorAll('.translatable');
     translatableElements.forEach(element => {
         element.classList.add('loading');
     });
 
-
-    const newURL = '?lan=' + languageCode;
-    history.pushState({}, '', newURL);
+    
+    changeURL(languageCode);
 
     const currentTextContent = original_lines;
     const linesJSONObject = {

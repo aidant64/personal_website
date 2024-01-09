@@ -145,11 +145,11 @@ $languages = array(
         </div>
 
         <div class="tab-div">
-            <p id="education" class="translatable tab selected">Education</p>
-            <p id="research" class="translatable tab">Research</p>
-            <p id="team" class="translatable tab">Team</p>
-            <p id="project" class="translatable tab">Project</p>
-            <p id="apps" class="translatable tab">Apps</p>
+            <p class="translatable tab selected">Education</p>
+            <p class="translatable tab">Research</p>
+            <p class="translatable tab">Team</p>
+            <p class="translatable tab">Project</p>
+            <p class="translatable tab">Apps</p>
         </div>
         <br><br>
 
@@ -216,12 +216,12 @@ $languages = array(
             <a href='/timemachine' class="translatable project">Time machine (git history)</a><br><br>
             <a href='/weather' class="translatable project">Local Buoys</a><br><br>
             <a href='/sb' class="translatable project">Local Weather</a><br><br>
-            <a href='/sb' class="translatable project">Buoy Art</a><br><br>
+            <a href='/art' class="translatable project">Buoy Art</a><br><br>
         </div>
 
 
-        <script src='/home/translate_script.js' defer></script>
         <script src='/home/tabs.js' defer></script>
+        <script src='/home/translate_script.js' defer></script>
 
 </body>
 
